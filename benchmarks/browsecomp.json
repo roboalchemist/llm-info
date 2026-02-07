@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "id": "browsecomp",
+  "name": "BrowseComp",
+  "category": "agent",
+  "subcategory": "web-navigation",
+  "description": "Web navigation benchmark with 1266 questions requiring persistent multi-step web browsing and information gathering.",
+  "creator": "OpenAI",
+  "year_introduced": 2025,
+  "url": "https://openai.com/index/browsecomp/",
+  "dataset": {
+    "num_problems": 1266,
+    "source": "Web information gathering tasks"
+  },
+  "metrics": [
+    {
+      "name": "question_answering_rate",
+      "range": "0-100%",
+      "primary": true
+    }
+  ],
+  "saturation": "unknown",
+  "contamination_resistance": "high",
+  "adoption": "emerging",
+  "tier": 3,
+  "reported_by": ["openai", "moonshot", "minimax", "zhipu"],
+  "notes": "1266 questions requiring persistent web navigation and multi-step information gathering.",
+  "meta": {
+    "created_at": "2026-02-07T12:00:00Z",
+    "updated_at": "2026-02-07T12:00:00Z"
+  }
+}

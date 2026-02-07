@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "id": "ioi-benchmark",
+  "name": "IOI Benchmark",
+  "category": "coding-competitive",
+  "subcategory": "olympiad",
+  "description": "Benchmark based on real International Olympiad in Informatics (IOI) competition problems, evaluating models on the most challenging programming tasks with multiple submission attempts allowed.",
+  "creator": "Research team (vals.ai)",
+  "year_introduced": 2024,
+  "url": "https://www.vals.ai/benchmarks/ioi",
+  "paper": "https://arxiv.org/abs/2510.09595",
+  "dataset": {
+    "num_problems": 30,
+    "languages": ["C++", "Python"],
+    "source": "International Olympiad in Informatics"
+  },
+  "metrics": [
+    {
+      "name": "solve_rate",
+      "range": "0-100%",
+      "primary": true
+    }
+  ],
+  "saturation": "not_saturated",
+  "adoption": "emerging",
+  "tier": 2,
+  "notes": "Top performance GPT-5.2 54.83%. Models allowed up to 50 submission attempts per problem to match real IOI competition format.",
+  "meta": {
+    "created_at": "2026-02-07T12:00:00Z",
+    "updated_at": "2026-02-07T12:00:00Z"
+  }
+}

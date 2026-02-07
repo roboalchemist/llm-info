@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.0.0",
+  "id": "evalplus",
+  "name": "EvalPlus (HumanEval+ / MBPP+)",
+  "category": "coding",
+  "subcategory": "function-generation",
+  "description": "Extended versions of HumanEval and MBPP benchmarks with significantly more comprehensive test cases. Contains 164 HumanEval+ problems and 500 MBPP+ problems with 80x and 35x more tests respectively.",
+  "creator": "EvalPlus team",
+  "year_introduced": 2023,
+  "url": "https://evalplus.github.io/",
+  "github": "https://github.com/evalplus/evalplus",
+  "dataset": {
+    "num_problems": 664,
+    "languages": ["Python"],
+    "source": "Enhanced versions of HumanEval and MBPP"
+  },
+  "metrics": [
+    {
+      "name": "pass@1",
+      "range": "0-100%",
+      "primary": true
+    }
+  ],
+  "saturation": "approaching",
+  "adoption": "high",
+  "tier": 2,
+  "related_benchmarks": ["humaneval", "mbpp"],
+  "notes": "Designed to expose failure modes in models that pass simpler versions. HumanEval+ has 164 problems with 80x more tests, MBPP+ has 500 problems with 35x more tests.",
+  "meta": {
+    "created_at": "2026-02-07T12:00:00Z",
+    "updated_at": "2026-02-07T12:00:00Z"
+  }
+}

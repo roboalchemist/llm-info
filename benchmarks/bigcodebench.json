@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "id": "bigcodebench",
+  "name": "BigCodeBench",
+  "category": "coding",
+  "subcategory": "library-usage",
+  "description": "Comprehensive benchmark for evaluating AI models on practical library usage and code generation across diverse domains. Contains 1140 tasks covering 139 libraries across 7 domains.",
+  "creator": "BigCode / Hugging Face",
+  "year_introduced": 2024,
+  "url": "https://bigcode-bench.github.io/",
+  "github": "https://github.com/bigcode-project/bigcodebench",
+  "dataset": {
+    "num_problems": 1140,
+    "languages": ["Python"],
+    "source": "Real-world library usage patterns"
+  },
+  "metrics": [
+    {
+      "name": "pass@1",
+      "range": "0-100%",
+      "primary": true
+    }
+  ],
+  "saturation": "not_saturated",
+  "adoption": "medium",
+  "tier": 2,
+  "notes": "Top performance ~60% pass@1 vs 97% human baseline. Covers 139 libraries across 7 distinct domains.",
+  "meta": {
+    "created_at": "2026-02-07T12:00:00Z",
+    "updated_at": "2026-02-07T12:00:00Z"
+  }
+}

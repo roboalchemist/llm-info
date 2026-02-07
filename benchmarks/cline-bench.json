@@ -1,0 +1,31 @@
+{
+  "schema_version": "1.0.0",
+  "id": "cline-bench",
+  "name": "Cline Bench",
+  "category": "coding-agent",
+  "subcategory": "real-world",
+  "description": "Benchmark for evaluating agentic AI models on real-world open source repository tasks using containerized reinforcement learning environments with realistic project structures.",
+  "creator": "Cline",
+  "year_introduced": 2025,
+  "url": "https://cline.bot/blog/cline-bench-initiative",
+  "dataset": {
+    "num_problems": 50,
+    "languages": ["Python", "JavaScript", "TypeScript", "Java", "Go"],
+    "source": "Real open source repositories"
+  },
+  "metrics": [
+    {
+      "name": "task_completion_rate",
+      "range": "0-100%",
+      "primary": true
+    }
+  ],
+  "saturation": "not_saturated",
+  "adoption": "emerging",
+  "tier": 2,
+  "notes": "Real OSS repository tasks evaluated in containerized RL environments simulating realistic development workflows.",
+  "meta": {
+    "created_at": "2026-02-07T12:00:00Z",
+    "updated_at": "2026-02-07T12:00:00Z"
+  }
+}

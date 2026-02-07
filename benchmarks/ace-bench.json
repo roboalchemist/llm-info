@@ -1,0 +1,31 @@
+{
+  "schema_version": "1.0.0",
+  "id": "ace-bench",
+  "name": "ACE-Bench (Agentic Coding End-to-End)",
+  "category": "coding-agent",
+  "subcategory": "feature-development",
+  "description": "Benchmark for evaluating autonomous coding agents on end-to-end feature development tasks from real repositories. Contains 212 feature development tasks extracted from 16 real GitHub repositories with 889 containerized Docker environments.",
+  "creator": "Research team",
+  "year_introduced": 2025,
+  "url": "https://openreview.net/forum?id=41xrZ3uGuI",
+  "dataset": {
+    "num_problems": 212,
+    "languages": ["Python", "JavaScript", "Java", "Go", "Rust", "C++"],
+    "source": "Real GitHub repositories"
+  },
+  "metrics": [
+    {
+      "name": "task_completion_rate",
+      "range": "0-100%",
+      "primary": true
+    }
+  ],
+  "saturation": "not_saturated",
+  "adoption": "emerging",
+  "tier": 2,
+  "notes": "CRITICAL: Models achieving 70% on SWE-bench collapse to 7.5% on ACE-Bench, indicating a significant generalization gap. Features 889 Docker environments for containerized evaluation.",
+  "meta": {
+    "created_at": "2026-02-07T12:00:00Z",
+    "updated_at": "2026-02-07T12:00:00Z"
+  }
+}

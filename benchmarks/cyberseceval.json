@@ -1,0 +1,37 @@
+{
+  "schema_version": "1.0.0",
+  "id": "cyberseceval",
+  "name": "CyberSecEval",
+  "category": "coding-security",
+  "subcategory": "code-security",
+  "description": "Meta's Purple Llama initiative benchmark evaluating insecure coding practices, prompt injection resilience, and vulnerability patching capabilities.",
+  "creator": "Meta (Purple Llama)",
+  "year_introduced": 2024,
+  "github": "https://github.com/meta-llama/PurpleLlama",
+  "metrics": [
+    {
+      "name": "insecure_coding_rate",
+      "range": "0-100%",
+      "primary": true
+    },
+    {
+      "name": "prompt_injection_resilience",
+      "range": "0-100%",
+      "primary": true
+    },
+    {
+      "name": "vulnerability_patching_rate",
+      "range": "0-100%",
+      "primary": true
+    }
+  ],
+  "saturation": "unknown",
+  "contamination_resistance": "high",
+  "adoption": "medium",
+  "tier": 3,
+  "notes": "Evaluates multiple security dimensions: insecure coding practices, prompt injection resilience, and vulnerability patching.",
+  "meta": {
+    "created_at": "2026-02-07T12:00:00Z",
+    "updated_at": "2026-02-07T12:00:00Z"
+  }
+}

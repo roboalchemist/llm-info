@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "id": "vibe",
+  "name": "VIBE Benchmark",
+  "category": "coding-agent",
+  "subcategory": "full-stack",
+  "description": "Comprehensive full-stack development benchmark spanning Web, Simulation, Android, iOS, and Backend tasks. Features an Agent-as-Verifier paradigm where tasks require multi-platform implementation with automated verification.",
+  "creator": "MiniMax",
+  "year_introduced": 2025,
+  "url": "https://www.vals.ai/benchmarks/vibe-code",
+  "dataset": {
+    "num_problems": 200,
+    "languages": ["JavaScript", "TypeScript", "Python", "Java", "Swift", "Kotlin"],
+    "source": "Multi-platform development tasks"
+  },
+  "metrics": [
+    {
+      "name": "task_completion_rate",
+      "range": "0-100%",
+      "primary": true
+    }
+  ],
+  "saturation": "not_saturated",
+  "adoption": "medium",
+  "tier": 2,
+  "reported_by": ["minimax", "openai", "anthropic"],
+  "notes": "No model consistently passes all tests. Agent-as-Verifier paradigm where agents must generate code that passes automatically-generated tests across Web, Simulation, Android, iOS, and Backend domains.",
+  "meta": {
+    "created_at": "2026-02-07T12:00:00Z",
+    "updated_at": "2026-02-07T12:00:00Z"
+  }
+}

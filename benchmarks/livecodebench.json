@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.0.0",
+  "id": "livecodebnch",
+  "name": "LiveCodeBench",
+  "category": "coding-competitive",
+  "subcategory": "competitive-programming",
+  "creator": "LiveCodeBench team",
+  "year_introduced": 2024,
+  "url": "https://livecodebench.github.io/",
+  "github": "https://github.com/LiveCodeBench/LiveCodeBench",
+  "paper": "https://arxiv.org/abs/2403.07974",
+  "dataset": {
+    "num_problems": 1055,
+    "languages": ["python", "cpp", "java"],
+    "source": "LeetCode, AtCoder, Codeforces (time-stamped)"
+  },
+  "metrics": [
+    {
+      "name": "pass@1",
+      "range": "0-100%",
+      "primary": true
+    },
+    {
+      "name": "elo",
+      "range": "0-3000",
+      "primary": false
+    }
+  ],
+  "saturation": "not_saturated",
+  "contamination_resistance": "high",
+  "adoption": "high",
+  "tier": 1,
+  "reported_by": [
+    "anthropic",
+    "openai",
+    "google",
+    "moonshot",
+    "zhipu",
+    "alibaba",
+    "deepseek",
+    "meta"
+  ],
+  "notes": "Continuously updated with fresh problems. Time-segmented evaluation prevents contamination. v6 has 1055 problems.",
+  "meta": {
+    "created_at": "2026-02-07T12:00:00Z",
+    "updated_at": "2026-02-07T12:00:00Z"
+  }
+}

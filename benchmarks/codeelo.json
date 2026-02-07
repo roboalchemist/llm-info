@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "id": "codeelo",
+  "name": "CodeElo (Codeforces Elo)",
+  "category": "coding-competitive",
+  "subcategory": "competitive-programming",
+  "description": "Competitive programming benchmark using 387 Codeforces problems with Elo ratings ranging from 0-3500, enabling human-comparable performance assessment of AI models on algorithmic challenges.",
+  "creator": "Alibaba / Qwen team",
+  "year_introduced": 2025,
+  "github": "https://github.com/QwenLM/CodeElo",
+  "paper": "https://arxiv.org/abs/2501.01257",
+  "dataset": {
+    "num_problems": 387,
+    "languages": ["C++", "Python", "Java"],
+    "source": "Codeforces competitive programming platform"
+  },
+  "metrics": [
+    {
+      "name": "elo_rating",
+      "range": "0-3500 elo",
+      "primary": true
+    }
+  ],
+  "saturation": "not_saturated",
+  "adoption": "emerging",
+  "tier": 2,
+  "notes": "Top performance 1578 Elo (o1-mini). Elo scale is directly comparable to human competitive programmer ratings.",
+  "meta": {
+    "created_at": "2026-02-07T12:00:00Z",
+    "updated_at": "2026-02-07T12:00:00Z"
+  }
+}

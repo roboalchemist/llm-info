@@ -1,0 +1,31 @@
+{
+  "schema_version": "1.0.0",
+  "id": "swe-evo",
+  "name": "SWE-EVO",
+  "category": "coding-agent",
+  "subcategory": "software-evolution",
+  "description": "Benchmark for evaluating agentic AI models on software evolution tasks, measuring their ability to modify and maintain existing codebases. Contains 48 evolution tasks with an average of 21 files modified and 874 tests per instance.",
+  "creator": "Research team",
+  "year_introduced": 2025,
+  "paper": "https://arxiv.org/abs/2512.18470",
+  "dataset": {
+    "num_problems": 48,
+    "languages": ["Python", "JavaScript", "Java"],
+    "source": "Real-world code evolution scenarios"
+  },
+  "metrics": [
+    {
+      "name": "success_rate",
+      "range": "0-100%",
+      "primary": true
+    }
+  ],
+  "saturation": "not_saturated",
+  "adoption": "emerging",
+  "tier": 2,
+  "notes": "Top performance 21% (GPT-5 + OpenHands) compared to 65% on SWE-bench Verified, showing significant difficulty gap. Each instance averages 21 files modified with 874 test cases.",
+  "meta": {
+    "created_at": "2026-02-07T12:00:00Z",
+    "updated_at": "2026-02-07T12:00:00Z"
+  }
+}

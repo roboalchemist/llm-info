@@ -1,0 +1,83 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/benchmark/v1",
+  "title": "AI Coding Benchmark",
+  "description": "Schema for tracking coding and software engineering benchmarks used to evaluate AI models.",
+  "type": "object",
+  "required": ["id", "name", "category", "schema_version"],
+  "properties": {
+    "schema_version": { "type": "string", "const": "1.0.0" },
+    "id": { "type": "string", "description": "Unique slug, e.g. 'swe-bench-verified'" },
+    "name": { "type": "string", "description": "Full display name" },
+    "category": {
+      "type": "string",
+      "enum": ["coding", "coding-agent", "coding-competitive", "coding-security", "coding-quality", "coding-multilingual", "reasoning", "knowledge", "multimodal", "safety", "agent", "long_context", "multilingual", "other"]
+    },
+    "subcategory": { "type": "string", "description": "Finer classification, e.g. 'issue-resolution', 'competitive-programming'" },
+    "description": { "type": "string" },
+    "creator": { "type": "string", "description": "Organization or team that created the benchmark" },
+    "year_introduced": { "type": "integer" },
+    "url": { "type": "string", "format": "uri", "description": "Official website or leaderboard" },
+    "paper": { "type": "string", "format": "uri", "description": "arXiv or published paper" },
+    "github": { "type": "string", "format": "uri" },
+    "dataset": {
+      "type": "object",
+      "properties": {
+        "num_problems": { "type": "integer" },
+        "languages": { "type": "array", "items": { "type": "string" }, "description": "Programming languages covered" },
+        "source": { "type": "string", "description": "Where problems come from, e.g. 'GitHub issues', 'Codeforces'" },
+        "huggingface": { "type": "string", "format": "uri" }
+      }
+    },
+    "metrics": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": { "type": "string", "description": "e.g. 'pass@1', 'resolve_rate', 'elo'" },
+          "range": { "type": "string", "description": "e.g. '0-100%', '0-3500 elo'" },
+          "primary": { "type": "boolean" }
+        }
+      }
+    },
+    "saturation": {
+      "type": "string",
+      "enum": ["saturated", "approaching", "not_saturated", "unknown"],
+      "description": "Whether frontier models have essentially maxed out this benchmark"
+    },
+    "contamination_resistance": {
+      "type": "string",
+      "enum": ["high", "medium", "low", "unknown"],
+      "description": "How well the benchmark resists training data contamination"
+    },
+    "adoption": {
+      "type": "string",
+      "enum": ["universal", "high", "medium", "emerging", "niche"],
+      "description": "How widely reported across frontier labs"
+    },
+    "reported_by": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Labs that report this benchmark, e.g. ['anthropic', 'openai', 'google']"
+    },
+    "tier": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 3,
+      "description": "1=gold standard, 2=important/emerging, 3=specialized/niche"
+    },
+    "related_benchmarks": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "IDs of related benchmarks in this registry"
+    },
+    "notes": { "type": "string" },
+    "meta": {
+      "type": "object",
+      "properties": {
+        "created_at": { "type": "string", "format": "date-time" },
+        "updated_at": { "type": "string", "format": "date-time" }
+      }
+    }
+  }
+}

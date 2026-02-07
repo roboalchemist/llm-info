@@ -1,0 +1,37 @@
+{
+  "schema_version": "1.0.0",
+  "id": "debugbench",
+  "name": "DebugBench",
+  "category": "coding-quality",
+  "subcategory": "debugging",
+  "description": "Code debugging benchmark with 4253 instances across C++, Java, and Python. Tests ability to identify and fix 4 major bug categories and 18 minor bug types.",
+  "creator": "THUNLP (Tsinghua)",
+  "year_introduced": 2024,
+  "github": "https://github.com/thunlp/DebugBench",
+  "dataset": {
+    "num_problems": 4253,
+    "languages": ["C++", "Java", "Python"],
+    "source": "Real-world code repositories"
+  },
+  "metrics": [
+    {
+      "name": "debug_accuracy",
+      "range": "0-100%",
+      "primary": true
+    },
+    {
+      "name": "bug_category_coverage",
+      "range": "0-4 major, 0-18 minor types",
+      "primary": false
+    }
+  ],
+  "saturation": "unknown",
+  "contamination_resistance": "high",
+  "adoption": "emerging",
+  "tier": 3,
+  "notes": "Large-scale debugging benchmark with 4253 instances. Covers 4 major bug categories and 18 minor types.",
+  "meta": {
+    "created_at": "2026-02-07T12:00:00Z",
+    "updated_at": "2026-02-07T12:00:00Z"
+  }
+}

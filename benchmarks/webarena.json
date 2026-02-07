@@ -1,0 +1,37 @@
+{
+  "schema_version": "1.0.0",
+  "id": "webarena",
+  "name": "WebArena",
+  "category": "agent",
+  "subcategory": "web-automation",
+  "description": "Web automation benchmark with multi-step web interaction tasks in realistic web environments. Tests agent ability to navigate, interact with forms, and accomplish web-based goals.",
+  "creator": "Research team",
+  "year_introduced": 2024,
+  "url": "https://webarena.dev/",
+  "dataset": {
+    "num_problems": 812,
+    "source": "Realistic web environments (e-commerce, content management, collaboration tools)"
+  },
+  "metrics": [
+    {
+      "name": "task_success_rate",
+      "range": "0-100%",
+      "primary": true
+    },
+    {
+      "name": "step_completion_rate",
+      "range": "0-100%",
+      "primary": false
+    }
+  ],
+  "saturation": "unknown",
+  "contamination_resistance": "high",
+  "adoption": "medium",
+  "tier": 3,
+  "reported_by": ["anthropic", "google"],
+  "notes": "Multi-step web automation tasks in realistic environments. Top: IBM CUGA 61.7%.",
+  "meta": {
+    "created_at": "2026-02-07T12:00:00Z",
+    "updated_at": "2026-02-07T12:00:00Z"
+  }
+}

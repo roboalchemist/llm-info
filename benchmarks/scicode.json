@@ -1,0 +1,39 @@
+{
+  "schema_version": "1.0.0",
+  "id": "scicode",
+  "name": "SciCode",
+  "category": "coding",
+  "subcategory": "scientific-computing",
+  "description": "Scientific computing benchmark with 338 subproblems from 80 main problems across 16 science subdomains. Tests ability to write scientific and numerical code.",
+  "creator": "Research team",
+  "year_introduced": 2024,
+  "url": "https://scicode-bench.github.io/",
+  "paper": "https://huggingface.co/papers/2407.13168",
+  "dataset": {
+    "num_problems": 338,
+    "languages": ["Python"],
+    "source": "Scientific computing tasks from 16 subdomains"
+  },
+  "metrics": [
+    {
+      "name": "problem_solving_rate",
+      "range": "0-100%",
+      "primary": true
+    },
+    {
+      "name": "subdomain_coverage",
+      "range": "0-16 subdomains",
+      "primary": false
+    }
+  ],
+  "saturation": "unknown",
+  "contamination_resistance": "high",
+  "adoption": "emerging",
+  "tier": 3,
+  "reported_by": ["anthropic", "openai", "moonshot"],
+  "notes": "338 subproblems from 80 main problems across 16 science subdomains. Very difficult benchmark. Top: Claude 3.5 Sonnet 4.6%.",
+  "meta": {
+    "created_at": "2026-02-07T12:00:00Z",
+    "updated_at": "2026-02-07T12:00:00Z"
+  }
+}

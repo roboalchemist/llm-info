@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "id": "swe-bench-pro",
+  "name": "SWE-bench Pro",
+  "category": "coding-agent",
+  "subcategory": "issue-resolution",
+  "creator": "Scale AI",
+  "year_introduced": 2025,
+  "url": "https://scale.com/leaderboard/swe_bench_pro_public",
+  "dataset": {
+    "num_problems": 731,
+    "languages": ["python", "javascript", "typescript", "java"],
+    "source": "Harder real-world issues with 2+ year training cutoff"
+  },
+  "saturation": "not_saturated",
+  "contamination_resistance": "high",
+  "adoption": "high",
+  "tier": 1,
+  "reported_by": [
+    "anthropic",
+    "openai",
+    "google"
+  ],
+  "related_benchmarks": [
+    "swe-bench-verified"
+  ],
+  "notes": "Much harder than Verified. Top models score ~23-56%. Multi-language.",
+  "meta": {
+    "created_at": "2026-02-07T12:00:00Z",
+    "updated_at": "2026-02-07T12:00:00Z"
+  }
+}

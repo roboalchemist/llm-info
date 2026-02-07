@@ -1,0 +1,37 @@
+{
+  "schema_version": "1.0.0",
+  "id": "toolathlon",
+  "name": "Toolathlon",
+  "category": "agent",
+  "subcategory": "tool-use",
+  "description": "Tool-use benchmark with 108 tasks across 32 applications and 604 available tools. Evaluates agent capability to use diverse tools effectively.",
+  "creator": "HKUST-NLP",
+  "year_introduced": 2025,
+  "github": "https://github.com/hkust-nlp/Toolathlon",
+  "dataset": {
+    "num_problems": 108,
+    "source": "32 diverse applications with 604 tools"
+  },
+  "metrics": [
+    {
+      "name": "task_success_rate",
+      "range": "0-100%",
+      "primary": true
+    },
+    {
+      "name": "tool_coverage",
+      "range": "0-604 tools",
+      "primary": false
+    }
+  ],
+  "saturation": "unknown",
+  "contamination_resistance": "high",
+  "adoption": "emerging",
+  "tier": 3,
+  "reported_by": ["anthropic"],
+  "notes": "108 tasks across 32 applications with 604 tools. Claude Sonnet 4.5: 38.6%.",
+  "meta": {
+    "created_at": "2026-02-07T12:00:00Z",
+    "updated_at": "2026-02-07T12:00:00Z"
+  }
+}

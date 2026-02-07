@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.0.0",
+  "id": "swe-bench-multilingual",
+  "name": "SWE-bench Multilingual",
+  "category": "coding-multilingual",
+  "subcategory": "issue-resolution",
+  "creator": "SWE-bench community",
+  "year_introduced": 2025,
+  "url": "https://www.swebench.com/multilingual.html",
+  "github": "https://github.com/multi-swe-bench/multi-swe-bench",
+  "dataset": {
+    "num_problems": 1632,
+    "languages": ["python", "java", "typescript", "javascript", "go", "rust", "c", "cpp"],
+    "source": "Real-world issues from diverse programming ecosystems"
+  },
+  "saturation": "not_saturated",
+  "contamination_resistance": "high",
+  "adoption": "medium",
+  "tier": 2,
+  "reported_by": [
+    "anthropic",
+    "moonshot",
+    "minimax",
+    "alibaba"
+  ],
+  "related_benchmarks": [
+    "swe-bench-verified"
+  ],
+  "meta": {
+    "created_at": "2026-02-07T12:00:00Z",
+    "updated_at": "2026-02-07T12:00:00Z"
+  }
+}

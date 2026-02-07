@@ -1,0 +1,38 @@
+{
+  "schema_version": "1.0.0",
+  "id": "multipl-e",
+  "name": "MultiPL-E",
+  "category": "coding-multilingual",
+  "description": "Multilingual programming benchmark with HumanEval and MBPP problems translated to 22 programming languages.",
+  "creator": "Northeastern University",
+  "year_introduced": 2023,
+  "github": "https://github.com/nuprl/MultiPL-E",
+  "paper": "https://arxiv.org/abs/2305.02140",
+  "dataset": {
+    "num_problems": 500,
+    "languages": ["Python", "JavaScript", "Go", "Java", "C++", "C", "C#", "TypeScript", "Ruby", "Rust", "PHP", "R", "Swift", "Kotlin", "Julia", "Scala", "Haskell", "Groovy", "Bash", "PowerShell", "Lua", "Perl"],
+    "source": "HumanEval and MBPP translated to 22 languages"
+  },
+  "metrics": [
+    {
+      "name": "pass_rate",
+      "range": "0-100%",
+      "primary": true
+    },
+    {
+      "name": "language_coverage",
+      "range": "0-22 languages",
+      "primary": false
+    }
+  ],
+  "saturation": "unknown",
+  "contamination_resistance": "medium",
+  "adoption": "medium",
+  "tier": 3,
+  "related_benchmarks": ["humaneval", "mbpp"],
+  "notes": "HumanEval and MBPP translated to 22 programming languages.",
+  "meta": {
+    "created_at": "2026-02-07T12:00:00Z",
+    "updated_at": "2026-02-07T12:00:00Z"
+  }
+}

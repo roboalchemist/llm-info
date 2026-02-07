@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.0.0",
+  "id": "swe-perf",
+  "name": "SWE-Perf",
+  "category": "coding-quality",
+  "subcategory": "performance-optimization",
+  "description": "Software engineering performance optimization benchmark with 140 instances from real pull requests. Evaluates code optimization capabilities.",
+  "creator": "SWE-Perf team",
+  "year_introduced": 2025,
+  "url": "https://swe-perf.github.io/",
+  "dataset": {
+    "num_problems": 140,
+    "source": "Real GitHub pull requests"
+  },
+  "metrics": [
+    {
+      "name": "optimization_improvement",
+      "range": "0-100%",
+      "primary": true
+    },
+    {
+      "name": "expert_improvement_baseline",
+      "range": "0-100%",
+      "primary": false
+    }
+  ],
+  "saturation": "unknown",
+  "contamination_resistance": "high",
+  "adoption": "emerging",
+  "tier": 3,
+  "notes": "140 real PR instances. Models achieve 0.4-1.7% improvement vs 10.85% expert baseline.",
+  "meta": {
+    "created_at": "2026-02-07T12:00:00Z",
+    "updated_at": "2026-02-07T12:00:00Z"
+  }
+}

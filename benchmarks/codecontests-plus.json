@@ -1,0 +1,38 @@
+{
+  "schema_version": "1.0.0",
+  "id": "codecontests-plus",
+  "name": "CodeContests+",
+  "category": "coding-competitive",
+  "description": "Competitive programming benchmark with 11690 problems sourced from coding contests. Includes high-quality test cases and 13M+ reference solutions.",
+  "creator": "Google DeepMind",
+  "year_introduced": 2025,
+  "github": "https://github.com/deepmind/code_contests",
+  "paper": "https://arxiv.org/abs/2506.05817",
+  "dataset": {
+    "num_problems": 11690,
+    "languages": ["Python", "C++", "Java"],
+    "source": "Competitive programming contests"
+  },
+  "metrics": [
+    {
+      "name": "pass_rate",
+      "range": "0-100%",
+      "primary": true
+    },
+    {
+      "name": "test_case_coverage",
+      "range": "0-100%",
+      "primary": false
+    }
+  ],
+  "saturation": "unknown",
+  "contamination_resistance": "high",
+  "adoption": "medium",
+  "tier": 3,
+  "reported_by": ["google", "anthropic"],
+  "notes": "11690 competitive programming problems with high-quality test cases and 13M+ reference solutions.",
+  "meta": {
+    "created_at": "2026-02-07T12:00:00Z",
+    "updated_at": "2026-02-07T12:00:00Z"
+  }
+}

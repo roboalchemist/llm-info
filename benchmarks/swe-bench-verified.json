@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.0.0",
+  "id": "swe-bench-verified",
+  "name": "SWE-bench Verified",
+  "category": "coding-agent",
+  "subcategory": "issue-resolution",
+  "creator": "Princeton NLP / OpenAI",
+  "year_introduced": 2024,
+  "url": "https://www.swebench.com/",
+  "paper": "https://arxiv.org/abs/2310.06770",
+  "github": "https://github.com/SWE-bench/SWE-bench",
+  "dataset": {
+    "num_problems": 500,
+    "languages": ["python"],
+    "source": "Human-validated GitHub issues from 12 Python repos"
+  },
+  "metrics": [
+    {
+      "name": "resolve_rate",
+      "range": "0-100%",
+      "primary": true
+    }
+  ],
+  "saturation": "not_saturated",
+  "contamination_resistance": "medium",
+  "adoption": "universal",
+  "tier": 1,
+  "reported_by": [
+    "anthropic",
+    "openai",
+    "google",
+    "moonshot",
+    "minimax",
+    "zhipu",
+    "alibaba",
+    "deepseek",
+    "meta"
+  ],
+  "notes": "Gold standard for coding evaluation. 500 human-verified solvable instances from original 2294. Top score ~81%.",
+  "meta": {
+    "created_at": "2026-02-07T12:00:00Z",
+    "updated_at": "2026-02-07T12:00:00Z"
+  }
+}

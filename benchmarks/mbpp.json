@@ -1,0 +1,43 @@
+{
+  "schema_version": "1.0.0",
+  "id": "mbpp",
+  "name": "MBPP",
+  "category": "coding",
+  "subcategory": "function-generation",
+  "creator": "Google",
+  "year_introduced": 2021,
+  "dataset": {
+    "num_problems": 974,
+    "languages": ["python"],
+    "source": "Crowd-sourced beginner-level Python tasks",
+    "huggingface": "https://huggingface.co/datasets/Muennighoff/mbpp"
+  },
+  "metrics": [
+    {
+      "name": "pass@1",
+      "range": "0-100%",
+      "primary": true
+    }
+  ],
+  "saturation": "saturated",
+  "contamination_resistance": "low",
+  "adoption": "universal",
+  "tier": 1,
+  "reported_by": [
+    "anthropic",
+    "openai",
+    "google",
+    "meta",
+    "alibaba",
+    "deepseek"
+  ],
+  "related_benchmarks": [
+    "humaneval",
+    "evalplus"
+  ],
+  "notes": "Saturated at 94%+. Larger than HumanEval. MBPP+ from EvalPlus adds 35x more tests.",
+  "meta": {
+    "created_at": "2026-02-07T12:00:00Z",
+    "updated_at": "2026-02-07T12:00:00Z"
+  }
+}

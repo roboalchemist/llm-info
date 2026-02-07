@@ -1,0 +1,37 @@
+{
+  "schema_version": "1.0.0",
+  "id": "osworld",
+  "name": "OSWorld",
+  "category": "agent",
+  "subcategory": "computer-use",
+  "description": "Operating system interaction benchmark with 369 real computer tasks spanning web and desktop environments. Tests agent ability to interact with desktop applications and accomplish real-world OS-level tasks.",
+  "creator": "Research team",
+  "year_introduced": 2024,
+  "url": "https://os-world.github.io/",
+  "dataset": {
+    "num_problems": 369,
+    "source": "Real computer tasks (web and desktop)"
+  },
+  "metrics": [
+    {
+      "name": "task_completion_rate",
+      "range": "0-100%",
+      "primary": true
+    },
+    {
+      "name": "human_baseline",
+      "range": "72%",
+      "primary": false
+    }
+  ],
+  "saturation": "unknown",
+  "contamination_resistance": "high",
+  "adoption": "medium",
+  "tier": 3,
+  "reported_by": ["anthropic", "google"],
+  "notes": "369 real computer tasks across web and desktop. Human baseline 72%, AI frontier 38%.",
+  "meta": {
+    "created_at": "2026-02-07T12:00:00Z",
+    "updated_at": "2026-02-07T12:00:00Z"
+  }
+}

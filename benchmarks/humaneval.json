@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "id": "humaneval",
+  "name": "HumanEval",
+  "category": "coding",
+  "subcategory": "function-generation",
+  "creator": "OpenAI",
+  "year_introduced": 2021,
+  "github": "https://github.com/openai/human-eval",
+  "dataset": {
+    "num_problems": 164,
+    "languages": ["python"],
+    "source": "Hand-written Python programming problems"
+  },
+  "metrics": [
+    {
+      "name": "pass@1",
+      "range": "0-100%",
+      "primary": true
+    }
+  ],
+  "saturation": "saturated",
+  "contamination_resistance": "low",
+  "adoption": "universal",
+  "tier": 1,
+  "reported_by": [
+    "anthropic",
+    "openai",
+    "google",
+    "meta",
+    "moonshot",
+    "minimax",
+    "zhipu",
+    "alibaba",
+    "deepseek"
+  ],
+  "related_benchmarks": [
+    "evalplus",
+    "mbpp"
+  ],
+  "notes": "Original coding benchmark. Now saturated (95%+). Still reported for historical comparison. EvalPlus extends with 80x more tests.",
+  "meta": {
+    "created_at": "2026-02-07T12:00:00Z",
+    "updated_at": "2026-02-07T12:00:00Z"
+  }
+}

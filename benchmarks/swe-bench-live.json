@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.0.0",
+  "id": "swe-bench-live",
+  "name": "SWE-bench Live",
+  "category": "coding-agent",
+  "subcategory": "issue-resolution",
+  "description": "Monthly-updated benchmark with fresh GitHub issues from real repositories, designed to prevent data contamination and memorization by continuously introducing new evaluation tasks.",
+  "creator": "SWE-bench team",
+  "year_introduced": 2025,
+  "url": "https://swe-bench-live.github.io/",
+  "dataset": {
+    "num_problems": 50,
+    "languages": ["Python", "JavaScript", "TypeScript", "Java"],
+    "source": "Fresh GitHub issues (monthly updates)"
+  },
+  "metrics": [
+    {
+      "name": "resolve_rate",
+      "range": "0-100%",
+      "primary": true
+    }
+  ],
+  "saturation": "not_saturated",
+  "contamination_resistance": "high",
+  "adoption": "medium",
+  "tier": 2,
+  "related_benchmarks": ["swe-bench-verified"],
+  "notes": "Monthly updates with 50 fresh issues prevent memorization and data contamination. High contamination resistance due to continuous updates.",
+  "meta": {
+    "created_at": "2026-02-07T12:00:00Z",
+    "updated_at": "2026-02-07T12:00:00Z"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "schema_version": "1.0.0",
+  "id": "terminal-bench",
+  "name": "Terminal-Bench 2.0",
+  "category": "coding-agent",
+  "subcategory": "cli-tasks",
+  "creator": "Terminal-Bench team",
+  "year_introduced": 2025,
+  "url": "https://www.tbench.ai/",
+  "dataset": {
+    "num_problems": 89,
+    "languages": [],
+    "source": "Real CLI/terminal tasks requiring multi-step workflows"
+  },
+  "metrics": [
+    {
+      "name": "resolve_rate",
+      "range": "0-100%",
+      "primary": true
+    }
+  ],
+  "saturation": "not_saturated",
+  "contamination_resistance": "high",
+  "adoption": "high",
+  "tier": 1,
+  "reported_by": [
+    "anthropic",
+    "openai",
+    "google",
+    "minimax",
+    "zhipu",
+    "alibaba"
+  ],
+  "related_benchmarks": [
+    "terminal-bench-hard"
+  ],
+  "notes": "Tests real terminal workflows. Terminal-Bench Hard (44 tasks) is a harder subset used in AA Intelligence Index.",
+  "meta": {
+    "created_at": "2026-02-07T12:00:00Z",
+    "updated_at": "2026-02-07T12:00:00Z"
+  }
+}
