@@ -37,6 +37,20 @@
       "score": 49.3,
       "score_unit": "percent",
       "source_url": "https://openai.com/index/openai-o3-mini/"
+    },
+    {
+      "name": "GPQA Diamond",
+      "category": "reasoning",
+      "score": 79.7,
+      "score_unit": "percent",
+      "source_url": "https://openai.com/index/openai-o3-mini/"
+    },
+    {
+      "name": "AIME 2025",
+      "category": "reasoning",
+      "score": 86.5,
+      "score_unit": "percent",
+      "source_url": "https://www.analyticsvidhya.com/blog/2025/04/o3-and-o4-mini/"
     }
   ],
 
@@ -54,7 +68,7 @@
 
   "meta": {
     "created_at": "2026-02-07T12:00:00Z",
-    "updated_at": "2026-02-07T12:00:00Z",
+    "updated_at": "2026-02-07T18:00:00Z",
     "created_by": "research-agent"
   }
 }

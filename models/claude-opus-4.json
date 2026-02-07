@@ -38,6 +38,36 @@
       "score": 72.5,
       "score_unit": "percent",
       "source_url": "https://www.anthropic.com/news/claude-4"
+    },
+    {
+      "name": "GPQA Diamond",
+      "category": "reasoning",
+      "score": 76.9,
+      "score_unit": "percent",
+      "methodology": {
+        "notes": "with extended thinking"
+      },
+      "source_url": "https://www.anthropic.com/news/claude-4"
+    },
+    {
+      "name": "MMMU",
+      "category": "multimodal",
+      "score": 75.5,
+      "score_unit": "percent",
+      "methodology": {
+        "notes": "with extended thinking"
+      },
+      "source_url": "https://www.anthropic.com/news/claude-4"
+    },
+    {
+      "name": "AIME",
+      "category": "reasoning",
+      "score": 43.2,
+      "score_unit": "percent",
+      "methodology": {
+        "notes": "with extended thinking"
+      },
+      "source_url": "https://www.anthropic.com/news/claude-4"
     }
   ],
 
@@ -59,7 +89,7 @@
 
   "meta": {
     "created_at": "2026-02-07T12:00:00Z",
-    "updated_at": "2026-02-07T12:00:00Z",
+    "updated_at": "2026-02-07T18:00:00Z",
     "created_by": "research-agent"
   }
 }

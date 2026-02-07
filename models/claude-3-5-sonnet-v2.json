@@ -38,6 +38,36 @@
       "score": 49.0,
       "score_unit": "percent",
       "source_url": "https://www.anthropic.com/news/swe-bench-sonnet"
+    },
+    {
+      "name": "GPQA Diamond",
+      "category": "reasoning",
+      "score": 59.4,
+      "score_unit": "percent",
+      "methodology": {
+        "notes": "0-shot CoT"
+      },
+      "source_url": "https://www.anthropic.com/news/claude-3-5-sonnet"
+    },
+    {
+      "name": "MATH-500",
+      "category": "reasoning",
+      "score": 71.1,
+      "score_unit": "percent",
+      "methodology": {
+        "notes": "0-shot CoT"
+      },
+      "source_url": "https://www.anthropic.com/news/claude-3-5-sonnet"
+    },
+    {
+      "name": "HumanEval",
+      "category": "coding",
+      "score": 92.0,
+      "score_unit": "percent",
+      "methodology": {
+        "notes": "0-shot"
+      },
+      "source_url": "https://www.anthropic.com/news/claude-3-5-sonnet"
     }
   ],
 
@@ -59,7 +89,7 @@
 
   "meta": {
     "created_at": "2026-02-07T12:00:00Z",
-    "updated_at": "2026-02-07T12:00:00Z",
+    "updated_at": "2026-02-07T18:00:00Z",
     "created_by": "research-agent"
   }
 }

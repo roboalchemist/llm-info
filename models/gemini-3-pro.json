@@ -60,6 +60,85 @@
       "score": 91.8,
       "score_unit": "percent",
       "source_url": "https://blog.google/products-and-platforms/products/gemini/gemini-3/"
+    },
+    {
+      "name": "GPQA Diamond",
+      "category": "reasoning",
+      "score": 91.9,
+      "score_unit": "percent",
+      "source_url": "https://automatio.ai/models/gemini-3-pro"
+    },
+    {
+      "name": "MMLU-Pro",
+      "category": "knowledge",
+      "score": 85.0,
+      "score_unit": "percent",
+      "source_url": "https://automatio.ai/models/gemini-3-pro"
+    },
+    {
+      "name": "HumanEval",
+      "category": "coding",
+      "score": 93.0,
+      "score_unit": "percent",
+      "source_url": "https://automatio.ai/models/gemini-3-pro"
+    },
+    {
+      "name": "ARC-AGI-2",
+      "category": "reasoning",
+      "score": 31.1,
+      "score_unit": "percent",
+      "methodology": {
+        "notes": "45.1% with Deep Think mode"
+      },
+      "source_url": "https://llm-stats.com/models/gemini-3-pro-preview"
+    },
+    {
+      "name": "Humanity's Last Exam",
+      "category": "reasoning",
+      "score": 45.8,
+      "score_unit": "percent",
+      "source_url": "https://automatio.ai/models/gemini-3-pro"
+    },
+    {
+      "name": "SimpleQA",
+      "category": "knowledge",
+      "score": 72.1,
+      "score_unit": "percent",
+      "source_url": "https://llm-stats.com/models/gemini-3-pro-preview"
+    },
+    {
+      "name": "IFEval",
+      "category": "knowledge",
+      "score": 85.0,
+      "score_unit": "percent",
+      "source_url": "https://automatio.ai/models/gemini-3-pro"
+    },
+    {
+      "name": "AIME 2025",
+      "category": "reasoning",
+      "score": 100.0,
+      "score_unit": "percent",
+      "methodology": {
+        "notes": "with code execution; 95.0% without tools"
+      },
+      "source_url": "https://automatio.ai/models/gemini-3-pro"
+    },
+    {
+      "name": "FrontierMath",
+      "category": "reasoning",
+      "score": 38.0,
+      "score_unit": "percent",
+      "methodology": {
+        "notes": "Tiers 1-3; 19% on Tier 4"
+      },
+      "source_url": "https://x.com/EpochAIResearch/status/1991945942174761050"
+    },
+    {
+      "name": "MathVista",
+      "category": "multimodal",
+      "score": 79.0,
+      "score_unit": "percent",
+      "source_url": "https://automatio.ai/models/gemini-3-pro"
     }
   ],
 
@@ -75,7 +154,7 @@
 
   "meta": {
     "created_at": "2026-02-07T12:00:00Z",
-    "updated_at": "2026-02-07T12:00:00Z",
+    "updated_at": "2026-02-07T18:00:00Z",
     "created_by": "research-agent"
   }
 }

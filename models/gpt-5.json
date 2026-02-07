@@ -41,6 +41,41 @@
         "notes": "Achieves 22% fewer tokens and 45% fewer tool calls compared to o3"
       },
       "source_url": "https://openai.com/index/introducing-gpt-5/"
+    },
+    {
+      "name": "MATH-500",
+      "category": "reasoning",
+      "score": 99.4,
+      "score_unit": "percent",
+      "source_url": "https://artificialanalysis.ai/evaluations/math-500"
+    },
+    {
+      "name": "HumanEval",
+      "category": "coding",
+      "score": 93.0,
+      "score_unit": "percent",
+      "source_url": "https://atoms.dev/blog/2025-llm-review-gpt-5-2-gemini-3-pro-claude-4-5"
+    },
+    {
+      "name": "Humanity's Last Exam",
+      "category": "reasoning",
+      "score": 25.0,
+      "score_unit": "percent",
+      "source_url": "https://singularityhub.com/2026/02/03/humanitys-last-exam-stumps-top-ai-models-and-thats-a-good-thing/"
+    },
+    {
+      "name": "IFEval",
+      "category": "knowledge",
+      "score": 95.9,
+      "score_unit": "percent",
+      "source_url": "https://arxiv.org/html/2512.14754v1"
+    },
+    {
+      "name": "AIME 2025",
+      "category": "reasoning",
+      "score": 94.6,
+      "score_unit": "percent",
+      "source_url": "https://openai.com/index/introducing-gpt-5/"
     }
   ],
 
@@ -65,7 +100,7 @@
 
   "meta": {
     "created_at": "2026-02-07T12:00:00Z",
-    "updated_at": "2026-02-07T12:00:00Z",
+    "updated_at": "2026-02-07T18:00:00Z",
     "created_by": "research-agent",
     "notes": "Red teaming involved 5000+ hours with 400+ external testers; efficiency metrics compared to o3 baseline"
   }

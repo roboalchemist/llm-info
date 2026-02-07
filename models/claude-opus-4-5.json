@@ -43,6 +43,72 @@
         "notes": "Averaged over 10 trials with 200K thinking budget on 500-problem dataset"
       },
       "source_url": "https://www.anthropic.com/news/claude-opus-4-5"
+    },
+    {
+      "name": "GPQA Diamond",
+      "category": "reasoning",
+      "score": 87.0,
+      "score_unit": "percent",
+      "source_url": "https://www.vellum.ai/blog/claude-opus-4-5-benchmarks"
+    },
+    {
+      "name": "MMLU-Pro",
+      "category": "knowledge",
+      "score": 90.0,
+      "score_unit": "percent",
+      "source_url": "https://artificialanalysis.ai/articles/claude-opus-4-5-benchmarks-and-analysis"
+    },
+    {
+      "name": "HumanEval",
+      "category": "coding",
+      "score": 90.0,
+      "score_unit": "percent",
+      "source_url": "https://medium.com/@leucopsis/claude-opus-4-5-review-1d9b46bb053a"
+    },
+    {
+      "name": "ARC-AGI-2",
+      "category": "reasoning",
+      "score": 37.6,
+      "score_unit": "percent",
+      "source_url": "https://www.vellum.ai/blog/claude-opus-4-5-benchmarks"
+    },
+    {
+      "name": "Humanity's Last Exam",
+      "category": "reasoning",
+      "score": 30.8,
+      "score_unit": "percent",
+      "methodology": {
+        "notes": "without tools; 43.4% with tools"
+      },
+      "source_url": "https://binaryverseai.com/claude-opus-4-6-benchmarks-agentic-independent/"
+    },
+    {
+      "name": "MMMU-Pro",
+      "category": "multimodal",
+      "score": 80.7,
+      "score_unit": "percent",
+      "source_url": "https://www.vellum.ai/blog/claude-opus-4-5-benchmarks"
+    },
+    {
+      "name": "IFEval",
+      "category": "knowledge",
+      "score": 90.0,
+      "score_unit": "percent",
+      "source_url": "https://www.vellum.ai/blog/claude-opus-4-5-benchmarks"
+    },
+    {
+      "name": "LiveCodeBench",
+      "category": "coding",
+      "score": 75.0,
+      "score_unit": "percent",
+      "source_url": "https://artificialanalysis.ai/articles/claude-opus-4-5-benchmarks-and-analysis"
+    },
+    {
+      "name": "AIME 2025",
+      "category": "reasoning",
+      "score": 92.8,
+      "score_unit": "percent",
+      "source_url": "https://www.cursor-ide.com/blog/gpt-5-2-vs-claude-4-5-coding-benchmark-2025"
     }
   ],
 
@@ -79,7 +145,7 @@
 
   "meta": {
     "created_at": "2026-02-07T12:00:00Z",
-    "updated_at": "2026-02-07T12:00:00Z",
+    "updated_at": "2026-02-07T18:00:00Z",
     "created_by": "research-agent"
   }
 }

@@ -37,6 +37,65 @@
       "score": 63.8,
       "score_unit": "percent",
       "source_url": "https://blog.google/technology/google-deepmind/gemini-model-thinking-updates-march-2025/"
+    },
+    {
+      "name": "GPQA Diamond",
+      "category": "reasoning",
+      "score": 83.0,
+      "score_unit": "percent",
+      "source_url": "https://llm-stats.com/models/gemini-2.5-pro"
+    },
+    {
+      "name": "ARC-AGI-2",
+      "category": "reasoning",
+      "score": 4.9,
+      "score_unit": "percent",
+      "source_url": "https://llm-stats.com/models/gemini-2.5-pro"
+    },
+    {
+      "name": "Humanity's Last Exam",
+      "category": "reasoning",
+      "score": 17.8,
+      "score_unit": "percent",
+      "source_url": "https://llm-stats.com/models/gemini-2.5-pro"
+    },
+    {
+      "name": "SimpleQA",
+      "category": "knowledge",
+      "score": 50.8,
+      "score_unit": "percent",
+      "source_url": "https://llm-stats.com/models/gemini-2.5-pro"
+    },
+    {
+      "name": "MMMU-Pro",
+      "category": "multimodal",
+      "score": 79.6,
+      "score_unit": "percent",
+      "source_url": "https://llm-stats.com/models/gemini-2.5-pro"
+    },
+    {
+      "name": "LiveCodeBench",
+      "category": "coding",
+      "score": 75.6,
+      "score_unit": "percent",
+      "methodology": {
+        "notes": "v5 pass@1"
+      },
+      "source_url": "https://llm-stats.com/models/gemini-2.5-pro"
+    },
+    {
+      "name": "AIME 2025",
+      "category": "reasoning",
+      "score": 83.0,
+      "score_unit": "percent",
+      "source_url": "https://llm-stats.com/models/gemini-2.5-pro"
+    },
+    {
+      "name": "Video-MME",
+      "category": "multimodal",
+      "score": 84.8,
+      "score_unit": "percent",
+      "source_url": "https://llm-stats.com/models/gemini-2.5-pro"
     }
   ],
 
@@ -53,7 +112,7 @@
 
   "meta": {
     "created_at": "2026-02-07T12:00:00Z",
-    "updated_at": "2026-02-07T12:00:00Z",
+    "updated_at": "2026-02-07T18:00:00Z",
     "created_by": "research-agent"
   }
 }

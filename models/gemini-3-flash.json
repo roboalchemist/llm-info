@@ -40,6 +40,89 @@
         "notes": "Range reported: 76.2%-78.0%"
       },
       "source_url": "https://blog.google/products-and-platforms/products/gemini/gemini-3-flash/"
+    },
+    {
+      "name": "GPQA Diamond",
+      "category": "reasoning",
+      "score": 90.4,
+      "score_unit": "percent",
+      "source_url": "https://automatio.ai/models/gemini-3-flash"
+    },
+    {
+      "name": "MMLU-Pro",
+      "category": "knowledge",
+      "score": 88.59,
+      "score_unit": "percent",
+      "source_url": "https://artificialanalysis.ai/articles/gemini-3-flash-everything-you-need-to-know"
+    },
+    {
+      "name": "HumanEval",
+      "category": "coding",
+      "score": 84.1,
+      "score_unit": "percent",
+      "source_url": "https://automatio.ai/models/gemini-3-flash"
+    },
+    {
+      "name": "ARC-AGI-2",
+      "category": "reasoning",
+      "score": 33.6,
+      "score_unit": "percent",
+      "source_url": "https://automatio.ai/models/gemini-3-flash"
+    },
+    {
+      "name": "Humanity's Last Exam",
+      "category": "reasoning",
+      "score": 43.5,
+      "score_unit": "percent",
+      "source_url": "https://automatio.ai/models/gemini-3-flash"
+    },
+    {
+      "name": "SimpleQA",
+      "category": "knowledge",
+      "score": 68.7,
+      "score_unit": "percent",
+      "source_url": "https://automatio.ai/models/gemini-3-flash"
+    },
+    {
+      "name": "MMMU-Pro",
+      "category": "multimodal",
+      "score": 81.2,
+      "score_unit": "percent",
+      "source_url": "https://automatio.ai/models/gemini-3-flash"
+    },
+    {
+      "name": "IFEval",
+      "category": "knowledge",
+      "score": 88.2,
+      "score_unit": "percent",
+      "source_url": "https://automatio.ai/models/gemini-3-flash"
+    },
+    {
+      "name": "AIME 2025",
+      "category": "reasoning",
+      "score": 99.7,
+      "score_unit": "percent",
+      "methodology": {
+        "notes": "with code execution; 95.2% without tools"
+      },
+      "source_url": "https://automatio.ai/models/gemini-3-flash"
+    },
+    {
+      "name": "FrontierMath",
+      "category": "reasoning",
+      "score": 36.0,
+      "score_unit": "percent",
+      "methodology": {
+        "notes": "Tiers 1-3"
+      },
+      "source_url": "https://x.com/EpochAIResearch/status/2002073416598499676"
+    },
+    {
+      "name": "MathVista",
+      "category": "multimodal",
+      "score": 65.4,
+      "score_unit": "percent",
+      "source_url": "https://automatio.ai/models/gemini-3-flash"
     }
   ],
 
@@ -55,7 +138,7 @@
 
   "meta": {
     "created_at": "2026-02-07T12:00:00Z",
-    "updated_at": "2026-02-07T12:00:00Z",
+    "updated_at": "2026-02-07T18:00:00Z",
     "created_by": "research-agent"
   }
 }

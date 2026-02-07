@@ -54,6 +54,76 @@
         "notes": "Performance with extended 1M token context window"
       },
       "source_url": "https://www.anthropic.com/news/claude-sonnet-4-5"
+    },
+    {
+      "name": "GPQA Diamond",
+      "category": "reasoning",
+      "score": 83.4,
+      "score_unit": "percent",
+      "source_url": "https://automatio.ai/models/claude-sonnet-4-5"
+    },
+    {
+      "name": "MMLU-Pro",
+      "category": "knowledge",
+      "score": 78.0,
+      "score_unit": "percent",
+      "source_url": "https://automatio.ai/models/claude-sonnet-4-5"
+    },
+    {
+      "name": "MATH-500",
+      "category": "reasoning",
+      "score": 87.0,
+      "score_unit": "percent",
+      "source_url": "https://automatio.ai/models/claude-sonnet-4-5"
+    },
+    {
+      "name": "HumanEval",
+      "category": "coding",
+      "score": 94.0,
+      "score_unit": "percent",
+      "source_url": "https://automatio.ai/models/claude-sonnet-4-5"
+    },
+    {
+      "name": "ARC-AGI-2",
+      "category": "reasoning",
+      "score": 14.0,
+      "score_unit": "percent",
+      "source_url": "https://automatio.ai/models/claude-sonnet-4-5"
+    },
+    {
+      "name": "SimpleQA",
+      "category": "knowledge",
+      "score": 52.0,
+      "score_unit": "percent",
+      "source_url": "https://automatio.ai/models/claude-sonnet-4-5"
+    },
+    {
+      "name": "MMMU-Pro",
+      "category": "multimodal",
+      "score": 55.0,
+      "score_unit": "percent",
+      "source_url": "https://automatio.ai/models/claude-sonnet-4-5"
+    },
+    {
+      "name": "IFEval",
+      "category": "knowledge",
+      "score": 88.0,
+      "score_unit": "percent",
+      "source_url": "https://automatio.ai/models/claude-sonnet-4-5"
+    },
+    {
+      "name": "LiveCodeBench",
+      "category": "coding",
+      "score": 68.0,
+      "score_unit": "percent",
+      "source_url": "https://automatio.ai/models/claude-sonnet-4-5"
+    },
+    {
+      "name": "AIME 2025",
+      "category": "reasoning",
+      "score": 87.0,
+      "score_unit": "percent",
+      "source_url": "https://automatio.ai/models/claude-sonnet-4-5"
     }
   ],
 
@@ -71,7 +141,7 @@
 
   "meta": {
     "created_at": "2026-02-07T12:00:00Z",
-    "updated_at": "2026-02-07T12:00:00Z",
+    "updated_at": "2026-02-07T18:00:00Z",
     "created_by": "research-agent"
   }
 }

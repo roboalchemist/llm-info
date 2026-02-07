@@ -78,6 +78,34 @@
       "category": "other",
       "score": 42.8,
       "score_unit": "percent"
+    },
+    {
+      "name": "GPQA Diamond",
+      "category": "reasoning",
+      "score": 85.7,
+      "score_unit": "percent",
+      "source_url": "https://llm-stats.com/models/glm-4.7"
+    },
+    {
+      "name": "SimpleQA",
+      "category": "knowledge",
+      "score": 46.0,
+      "score_unit": "percent",
+      "source_url": "https://llm-stats.com/models/glm-4.7"
+    },
+    {
+      "name": "AIME 2025",
+      "category": "reasoning",
+      "score": 95.7,
+      "score_unit": "percent",
+      "source_url": "https://z.ai/blog/glm-4.7"
+    },
+    {
+      "name": "IFEval",
+      "category": "knowledge",
+      "score": 88.0,
+      "score_unit": "percent",
+      "source_url": "https://llm-stats.com/models/glm-4.7"
     }
   ],
 
@@ -95,7 +123,7 @@
 
   "meta": {
     "created_at": "2026-02-07T12:00:00Z",
-    "updated_at": "2026-02-07T12:00:00Z",
+    "updated_at": "2026-02-07T18:00:00Z",
     "created_by": "research-agent"
   }
 }

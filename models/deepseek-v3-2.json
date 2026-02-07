@@ -38,6 +38,34 @@
       "category": "coding",
       "score": 73.1,
       "score_unit": "percent"
+    },
+    {
+      "name": "GPQA Diamond",
+      "category": "reasoning",
+      "score": 82.4,
+      "score_unit": "percent",
+      "source_url": "https://arxiv.org/pdf/2512.02556"
+    },
+    {
+      "name": "MMLU-Pro",
+      "category": "knowledge",
+      "score": 85.0,
+      "score_unit": "percent",
+      "source_url": "https://arxiv.org/pdf/2512.02556"
+    },
+    {
+      "name": "MATH-500",
+      "category": "reasoning",
+      "score": 82.8,
+      "score_unit": "percent",
+      "source_url": "https://arxiv.org/pdf/2412.19437"
+    },
+    {
+      "name": "AIME 2025",
+      "category": "reasoning",
+      "score": 93.1,
+      "score_unit": "percent",
+      "source_url": "https://arxiv.org/pdf/2512.02556"
     }
   ],
 
@@ -54,7 +82,7 @@
 
   "meta": {
     "created_at": "2026-02-07T12:00:00Z",
-    "updated_at": "2026-02-07T12:00:00Z",
+    "updated_at": "2026-02-07T18:00:00Z",
     "created_by": "research-agent"
   }
 }

@@ -43,6 +43,37 @@
         "notes": "Averaged over 25 trials with 200K thinking budget"
       },
       "source_url": "https://www.anthropic.com/news/claude-opus-4-6"
+    },
+    {
+      "name": "GPQA Diamond",
+      "category": "reasoning",
+      "score": 91.3,
+      "score_unit": "percent",
+      "source_url": "https://www.vellum.ai/blog/claude-opus-4-6-benchmarks"
+    },
+    {
+      "name": "ARC-AGI-2",
+      "category": "reasoning",
+      "score": 68.8,
+      "score_unit": "percent",
+      "source_url": "https://www.vellum.ai/blog/claude-opus-4-6-benchmarks"
+    },
+    {
+      "name": "Humanity's Last Exam",
+      "category": "reasoning",
+      "score": 40.0,
+      "score_unit": "percent",
+      "methodology": {
+        "notes": "without tools; 53.1% with tools"
+      },
+      "source_url": "https://www.anthropic.com/news/claude-opus-4-6"
+    },
+    {
+      "name": "MMMU-Pro",
+      "category": "multimodal",
+      "score": 77.3,
+      "score_unit": "percent",
+      "source_url": "https://www.vellum.ai/blog/claude-opus-4-6-benchmarks"
     }
   ],
 
@@ -60,7 +91,7 @@
 
   "meta": {
     "created_at": "2026-02-07T12:00:00Z",
-    "updated_at": "2026-02-07T12:00:00Z",
+    "updated_at": "2026-02-07T18:00:00Z",
     "created_by": "research-agent"
   }
 }

@@ -55,6 +55,55 @@
       "category": "coding",
       "score": 53.7,
       "score_unit": "percent"
+    },
+    {
+      "name": "GPQA Diamond",
+      "category": "reasoning",
+      "score": 75.1,
+      "score_unit": "percent",
+      "source_url": "https://medium.com/data-science-in-your-pocket/kimi-k2-benchmarks-explained-5b25dd6d3a3e"
+    },
+    {
+      "name": "MMLU-Pro",
+      "category": "knowledge",
+      "score": 81.1,
+      "score_unit": "percent",
+      "source_url": "https://medium.com/data-science-in-your-pocket/kimi-k2-benchmarks-explained-5b25dd6d3a3e"
+    },
+    {
+      "name": "MATH-500",
+      "category": "reasoning",
+      "score": 97.4,
+      "score_unit": "percent",
+      "source_url": "https://medium.com/data-science-in-your-pocket/kimi-k2-benchmarks-explained-5b25dd6d3a3e"
+    },
+    {
+      "name": "ARC-AGI-2",
+      "category": "reasoning",
+      "score": 13.3,
+      "score_unit": "percent",
+      "source_url": "https://www.understandingai.org/p/the-best-chinese-open-weight-models"
+    },
+    {
+      "name": "Humanity's Last Exam",
+      "category": "reasoning",
+      "score": 44.9,
+      "score_unit": "percent",
+      "source_url": "https://llm-stats.com/benchmarks/hle"
+    },
+    {
+      "name": "SimpleQA",
+      "category": "knowledge",
+      "score": 31.0,
+      "score_unit": "percent",
+      "source_url": "https://automatio.ai/models/kimi-k2-5"
+    },
+    {
+      "name": "IFEval",
+      "category": "knowledge",
+      "score": 89.8,
+      "score_unit": "percent",
+      "source_url": "https://automatio.ai/models/kimi-k2-5"
     }
   ],
 
@@ -75,7 +124,7 @@
 
   "meta": {
     "created_at": "2026-02-07T12:00:00Z",
-    "updated_at": "2026-02-07T12:00:00Z",
+    "updated_at": "2026-02-07T18:00:00Z",
     "created_by": "research-agent"
   }
 }

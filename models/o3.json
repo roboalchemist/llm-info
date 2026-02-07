@@ -40,6 +40,34 @@
         "notes": "Some sources report 69.1%; both values documented for reference"
       },
       "source_url": "https://openai.com/index/introducing-o3-and-o4-mini/"
+    },
+    {
+      "name": "GPQA Diamond",
+      "category": "reasoning",
+      "score": 87.7,
+      "score_unit": "percent",
+      "source_url": "https://openai.com/index/introducing-o3-and-o4-mini/"
+    },
+    {
+      "name": "MATH-500",
+      "category": "reasoning",
+      "score": 99.2,
+      "score_unit": "percent",
+      "source_url": "https://artificialanalysis.ai/evaluations/math-500"
+    },
+    {
+      "name": "MMMU-Pro",
+      "category": "multimodal",
+      "score": 82.9,
+      "score_unit": "percent",
+      "source_url": "https://www.analyticsvidhya.com/blog/2025/04/o3-and-o4-mini/"
+    },
+    {
+      "name": "AIME 2025",
+      "category": "reasoning",
+      "score": 98.4,
+      "score_unit": "percent",
+      "source_url": "https://artificialanalysis.ai/evaluations/aime-2025"
     }
   ],
 
@@ -57,7 +85,7 @@
 
   "meta": {
     "created_at": "2026-02-07T12:00:00Z",
-    "updated_at": "2026-02-07T12:00:00Z",
+    "updated_at": "2026-02-07T18:00:00Z",
     "created_by": "research-agent",
     "notes": "SWE-bench Verified score: primary value 71.7%, alternative source reports 69.1%"
   }

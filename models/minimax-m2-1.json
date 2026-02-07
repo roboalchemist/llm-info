@@ -73,6 +73,37 @@
       "category": "agent",
       "score": 47.9,
       "score_unit": "percent"
+    },
+    {
+      "name": "GPQA Diamond",
+      "category": "reasoning",
+      "score": 87.0,
+      "score_unit": "percent",
+      "source_url": "https://llm-stats.com/models/minimax-m2.1"
+    },
+    {
+      "name": "MMLU-Pro",
+      "category": "knowledge",
+      "score": 90.0,
+      "score_unit": "percent",
+      "source_url": "https://llm-stats.com/models/minimax-m2.1"
+    },
+    {
+      "name": "MATH-500",
+      "category": "reasoning",
+      "score": 78.3,
+      "score_unit": "percent",
+      "source_url": "https://llm-stats.com/models/minimax-m2.1"
+    },
+    {
+      "name": "Humanity's Last Exam",
+      "category": "reasoning",
+      "score": 22.0,
+      "score_unit": "percent",
+      "methodology": {
+        "notes": "without tools"
+      },
+      "source_url": "https://www.minimax.io/news/minimax-m21"
     }
   ],
 
@@ -89,7 +120,7 @@
 
   "meta": {
     "created_at": "2026-02-07T12:00:00Z",
-    "updated_at": "2026-02-07T12:00:00Z",
+    "updated_at": "2026-02-07T18:00:00Z",
     "created_by": "research-agent"
   }
 }
