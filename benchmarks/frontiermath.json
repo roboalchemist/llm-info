@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.0.0",
+  "id": "frontiermath",
+  "name": "FrontierMath",
+  "category": "reasoning",
+  "subcategory": "mathematics",
+  "description": "Research-level mathematical reasoning benchmark with 350 expert-written problems harder than MATH Level 5, spanning undergraduate through research-level mathematics.",
+  "creator": "Epoch AI",
+  "year_introduced": 2024,
+  "url": "https://epoch.ai/frontiermath",
+  "paper": "https://arxiv.org/abs/2411.04872",
+  "dataset": {
+    "num_problems": 350,
+    "source": "Expert-written research-level mathematics problems"
+  },
+  "metrics": [
+    {
+      "name": "accuracy",
+      "range": "0-100%",
+      "primary": true
+    }
+  ],
+  "saturation": "not_saturated",
+  "contamination_resistance": "high",
+  "adoption": "medium",
+  "tier": 1,
+  "reported_by": ["anthropic", "openai", "google", "deepseek"],
+  "notes": "Very challenging - frontier models score single-digit to low double-digit percentages. Tiered difficulty 1-4 (HS to research level).",
+  "meta": {
+    "created_at": "2026-02-07T12:00:00Z",
+    "updated_at": "2026-02-07T12:00:00Z"
+  }
+}

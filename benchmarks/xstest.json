@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "id": "xstest",
+  "name": "XSTest",
+  "category": "safety",
+  "subcategory": "safety-calibration",
+  "description": "Test suite for identifying exaggerated safety behaviors with 450 prompts (250 safe + 200 unsafe). Tests trade-off between helpfulness and harmlessness, identifying lexical overfitting in safety implementations.",
+  "creator": "Paul Röttger et al.",
+  "year_introduced": 2023,
+  "paper": "https://arxiv.org/abs/2308.01263",
+  "dataset": {
+    "num_problems": 450,
+    "source": "250 safe prompts + 200 unsafe contrast prompts across 10 prompt types"
+  },
+  "metrics": [
+    {
+      "name": "accuracy",
+      "range": "0-100%",
+      "primary": true
+    }
+  ],
+  "saturation": "not_saturated",
+  "contamination_resistance": "medium",
+  "adoption": "medium",
+  "tier": 2,
+  "reported_by": ["anthropic", "openai", "google", "meta"],
+  "notes": "NAACL 2024. Tests false refusal rate. Models often over-sensitive to certain keywords (lexical overfitting). 70-85% accuracy for top models.",
+  "meta": {
+    "created_at": "2026-02-07T12:00:00Z",
+    "updated_at": "2026-02-07T12:00:00Z"
+  }
+}

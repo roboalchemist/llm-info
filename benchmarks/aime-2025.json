@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "id": "aime-2025",
+  "name": "AIME 2025",
+  "category": "reasoning",
+  "subcategory": "mathematics",
+  "description": "American Invitational Mathematics Examination 2025 - olympiad-level mathematical reasoning with integer answers. Used as an AI benchmark due to recency reducing contamination.",
+  "creator": "MAA (Mathematical Association of America)",
+  "year_introduced": 2025,
+  "url": "https://www.kaggle.com/benchmarks/open-benchmarks/aime-2025",
+  "dataset": {
+    "num_problems": 30,
+    "source": "AIME 2025 competition problems"
+  },
+  "metrics": [
+    {
+      "name": "accuracy",
+      "range": "0-100%",
+      "primary": true
+    }
+  ],
+  "saturation": "approaching",
+  "contamination_resistance": "medium",
+  "adoption": "high",
+  "tier": 2,
+  "reported_by": ["openai", "google", "deepseek", "anthropic", "xai"],
+  "notes": "Approaching saturation on older AIME versions; 2025 version maintains challenge. Mid-90s range for top models.",
+  "meta": {
+    "created_at": "2026-02-07T12:00:00Z",
+    "updated_at": "2026-02-07T12:00:00Z"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.0.0",
+  "id": "truthfulqa",
+  "name": "TruthfulQA",
+  "category": "safety",
+  "subcategory": "truthfulness",
+  "description": "Adversarial benchmark with 817 questions across 38 categories testing whether models generate truthful answers vs reproducing common misconceptions. Tests inverse scaling phenomenon.",
+  "creator": "Stephanie Lin et al.",
+  "year_introduced": 2021,
+  "paper": "https://arxiv.org/abs/2109.07958",
+  "github": "https://github.com/sylinrl/TruthfulQA",
+  "dataset": {
+    "num_problems": 817,
+    "source": "Adversarial questions about common misconceptions across 38 categories"
+  },
+  "metrics": [
+    {
+      "name": "truthfulness",
+      "range": "0-100%",
+      "primary": true
+    }
+  ],
+  "saturation": "not_saturated",
+  "contamination_resistance": "medium",
+  "adoption": "high",
+  "tier": 2,
+  "reported_by": ["openai", "anthropic", "google", "meta"],
+  "notes": "Best models 70-80%. Larger models often perform worse (inverse scaling). Tests resistance to reproducing popular falsehoods.",
+  "meta": {
+    "created_at": "2026-02-07T12:00:00Z",
+    "updated_at": "2026-02-07T12:00:00Z"
+  }
+}

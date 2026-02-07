@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.0.0",
+  "id": "simpleqa",
+  "name": "SimpleQA",
+  "category": "knowledge",
+  "subcategory": "factuality",
+  "description": "Factuality benchmark with 4,326 short fact-seeking questions measuring parametric knowledge and resistance to hallucination. Designed to challenge frontier models where older QA benchmarks saturated.",
+  "creator": "OpenAI",
+  "year_introduced": 2024,
+  "url": "https://openai.com/index/introducing-simpleqa/",
+  "paper": "https://arxiv.org/abs/2411.04368",
+  "dataset": {
+    "num_problems": 4326,
+    "source": "Diverse fact-seeking questions verified by two independent annotators"
+  },
+  "metrics": [
+    {
+      "name": "accuracy",
+      "range": "0-100%",
+      "primary": true
+    }
+  ],
+  "saturation": "not_saturated",
+  "contamination_resistance": "high",
+  "adoption": "high",
+  "tier": 1,
+  "reported_by": ["openai", "anthropic", "google"],
+  "notes": "Frontier models score 35-50%. GPT-4o <40%. Tests calibration - whether models know what they know. SimpleQA Verified (1000 prompts) released 2025.",
+  "meta": {
+    "created_at": "2026-02-07T12:00:00Z",
+    "updated_at": "2026-02-07T12:00:00Z"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.0.0",
+  "id": "mathvista",
+  "name": "MathVista",
+  "category": "multimodal",
+  "subcategory": "visual-math",
+  "description": "Visual mathematical reasoning benchmark with 6,141 problems requiring understanding of charts, geometry, scientific figures, and other visual math content.",
+  "creator": "UCLA/Microsoft Research",
+  "year_introduced": 2023,
+  "url": "https://mathvista.github.io/",
+  "paper": "https://arxiv.org/abs/2310.02255",
+  "dataset": {
+    "num_problems": 6141,
+    "source": "Visual math problems from charts, geometry, scientific figures"
+  },
+  "metrics": [
+    {
+      "name": "accuracy",
+      "range": "0-100%",
+      "primary": true
+    }
+  ],
+  "saturation": "not_saturated",
+  "contamination_resistance": "high",
+  "adoption": "high",
+  "tier": 1,
+  "reported_by": ["openai", "google", "anthropic", "meta"],
+  "notes": "Top: o1 73.9%. Tests visual mathematical reasoning requiring joint vision and math skills.",
+  "meta": {
+    "created_at": "2026-02-07T12:00:00Z",
+    "updated_at": "2026-02-07T12:00:00Z"
+  }
+}

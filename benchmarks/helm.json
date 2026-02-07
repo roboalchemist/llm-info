@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.0.0",
+  "id": "helm",
+  "name": "HELM",
+  "category": "other",
+  "subcategory": "composite-index",
+  "description": "Stanford's Holistic Evaluation of Language Models measuring 7 metrics (accuracy, calibration, robustness, fairness, bias, toxicity, efficiency) across 16 core scenarios. Includes specialized long-context and safety variants.",
+  "creator": "Stanford CRFM",
+  "year_introduced": 2022,
+  "url": "https://crfm.stanford.edu/helm/",
+  "paper": "https://arxiv.org/abs/2211.09110",
+  "github": "https://github.com/stanford-crfm/helm",
+  "dataset": {
+    "source": "16 core scenarios covering diverse tasks, 7 evaluation metrics"
+  },
+  "metrics": [
+    {
+      "name": "multi_metric",
+      "range": "varies by metric",
+      "primary": true
+    }
+  ],
+  "saturation": "not_saturated",
+  "contamination_resistance": "medium",
+  "adoption": "high",
+  "tier": 1,
+  "reported_by": ["openai", "anthropic", "google", "meta"],
+  "notes": "Living benchmark. 96% standardized coverage across 30+ models. Includes HELM Safety (5 safety benchmarks) and HELM Long Context variants.",
+  "meta": {
+    "created_at": "2026-02-07T12:00:00Z",
+    "updated_at": "2026-02-07T12:00:00Z"
+  }
+}

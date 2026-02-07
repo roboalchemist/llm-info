@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.0.0",
+  "id": "mmbench",
+  "name": "MMBench",
+  "category": "multimodal",
+  "subcategory": "comprehensive",
+  "description": "Comprehensive multimodal benchmark with 2,974 questions across 20 ability dimensions covering Perception and Reasoning. Bilingual English/Chinese evaluation.",
+  "creator": "OpenCompass",
+  "year_introduced": 2023,
+  "paper": "https://arxiv.org/abs/2307.06281",
+  "github": "https://github.com/open-compass/MMBench",
+  "dataset": {
+    "num_problems": 2974,
+    "source": "Questions across 20 ability dimensions (perception and reasoning)"
+  },
+  "metrics": [
+    {
+      "name": "accuracy",
+      "range": "0-100%",
+      "primary": true
+    }
+  ],
+  "saturation": "not_saturated",
+  "contamination_resistance": "medium",
+  "adoption": "high",
+  "tier": 2,
+  "reported_by": ["openai", "google", "anthropic", "meta"],
+  "notes": "Top models 85-90%. ECCV 2024. 20 ability dimensions across 3 levels. Bilingual English/Chinese.",
+  "meta": {
+    "created_at": "2026-02-07T12:00:00Z",
+    "updated_at": "2026-02-07T12:00:00Z"
+  }
+}

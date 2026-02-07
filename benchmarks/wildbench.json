@@ -1,0 +1,38 @@
+{
+  "schema_version": "1.0.0",
+  "id": "wildbench",
+  "name": "WildBench",
+  "category": "knowledge",
+  "subcategory": "real-world",
+  "description": "Benchmark using 1,024 challenging real-world user queries extracted from 1M+ human-chatbot conversations. Uses automated WB-Reward and WB-Score metrics with 0.98 Pearson correlation to Chatbot Arena Elo.",
+  "creator": "Allen AI",
+  "year_introduced": 2024,
+  "paper": "https://arxiv.org/abs/2406.04770",
+  "github": "https://github.com/allenai/WildBench",
+  "dataset": {
+    "num_problems": 1024,
+    "source": "Real user queries from 1M+ chatbot conversations"
+  },
+  "metrics": [
+    {
+      "name": "wb_reward",
+      "range": "pairwise comparison",
+      "primary": true
+    },
+    {
+      "name": "wb_score",
+      "range": "0-100",
+      "primary": false
+    }
+  ],
+  "saturation": "not_saturated",
+  "contamination_resistance": "high",
+  "adoption": "medium",
+  "tier": 2,
+  "reported_by": ["allenai", "openai", "anthropic", "google"],
+  "notes": "0.98 Pearson correlation with Chatbot Arena Elo. Updated monthly. Better than ArenaHard (0.91) and AlpacaEval2 (0.89).",
+  "meta": {
+    "created_at": "2026-02-07T12:00:00Z",
+    "updated_at": "2026-02-07T12:00:00Z"
+  }
+}

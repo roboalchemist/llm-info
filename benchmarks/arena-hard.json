@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "id": "arena-hard",
+  "name": "Arena-Hard",
+  "category": "knowledge",
+  "subcategory": "automated-evaluation",
+  "description": "High-quality automated evaluation benchmark derived from Chatbot Arena data with 500 challenging prompts (+250 creative writing in v2.0). 89.1% agreement with human rankings.",
+  "creator": "LMSYS",
+  "year_introduced": 2024,
+  "url": "https://lmsys.org/blog/2024-04-19-arena-hard/",
+  "dataset": {
+    "num_problems": 750,
+    "source": "Challenging prompts from live Chatbot Arena data"
+  },
+  "metrics": [
+    {
+      "name": "win_rate",
+      "range": "0-100%",
+      "primary": true
+    }
+  ],
+  "saturation": "not_saturated",
+  "contamination_resistance": "high",
+  "adoption": "high",
+  "tier": 2,
+  "reported_by": ["openai", "anthropic", "google", "meta"],
+  "notes": "89.1% agreement with Chatbot Arena human rankings. 3x better separability than MT-Bench. ~$25 per evaluation.",
+  "meta": {
+    "created_at": "2026-02-07T12:00:00Z",
+    "updated_at": "2026-02-07T12:00:00Z"
+  }
+}

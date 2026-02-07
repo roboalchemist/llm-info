@@ -1,0 +1,38 @@
+{
+  "schema_version": "1.0.0",
+  "id": "ifeval",
+  "name": "IFEval",
+  "category": "knowledge",
+  "subcategory": "instruction-following",
+  "description": "Instruction-following benchmark with ~500 prompts containing 25 types of verifiable instructions testing fine-grained adherence (e.g., word count, formatting, content constraints).",
+  "creator": "Google",
+  "year_introduced": 2023,
+  "paper": "https://arxiv.org/abs/2311.07911",
+  "dataset": {
+    "num_problems": 500,
+    "source": "Prompts with verifiable instruction constraints",
+    "huggingface": "https://huggingface.co/datasets/google/IFEval"
+  },
+  "metrics": [
+    {
+      "name": "strict_accuracy",
+      "range": "0-100%",
+      "primary": true
+    },
+    {
+      "name": "loose_accuracy",
+      "range": "0-100%",
+      "primary": false
+    }
+  ],
+  "saturation": "not_saturated",
+  "contamination_resistance": "medium",
+  "adoption": "high",
+  "tier": 2,
+  "reported_by": ["google", "anthropic", "openai"],
+  "notes": "Top models score 80-95% strict adherence. M-IFEval multilingual variant released 2025.",
+  "meta": {
+    "created_at": "2026-02-07T12:00:00Z",
+    "updated_at": "2026-02-07T12:00:00Z"
+  }
+}

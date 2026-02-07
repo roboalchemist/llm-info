@@ -1,0 +1,39 @@
+{
+  "schema_version": "1.0.0",
+  "id": "arc-agi-2",
+  "name": "ARC-AGI-2",
+  "category": "reasoning",
+  "subcategory": "abstract-reasoning",
+  "description": "Abstract reasoning benchmark with grid-based visual puzzles testing fluid intelligence and generalization from few examples. Expanded from ARC-AGI-1 with increased contamination resistance.",
+  "creator": "François Chollet",
+  "year_introduced": 2025,
+  "url": "https://arcprize.org/arc-agi/2/",
+  "paper": "https://arxiv.org/abs/2505.11831",
+  "github": "https://github.com/fchollet/ARC-AGI",
+  "dataset": {
+    "num_problems": 800,
+    "source": "Human-created grid-based visual reasoning puzzles"
+  },
+  "metrics": [
+    {
+      "name": "accuracy",
+      "range": "0-100%",
+      "primary": true
+    },
+    {
+      "name": "human_baseline",
+      "range": "73-77%",
+      "primary": false
+    }
+  ],
+  "saturation": "not_saturated",
+  "contamination_resistance": "high",
+  "adoption": "high",
+  "tier": 1,
+  "reported_by": ["anthropic", "openai", "google", "xai"],
+  "notes": "Very low saturation. Claude Opus 4.6: 68.8%, Gemini 3 Deep Think: 45.1%. Human average: 73-77%. $1M+ ARC Prize competition.",
+  "meta": {
+    "created_at": "2026-02-07T12:00:00Z",
+    "updated_at": "2026-02-07T12:00:00Z"
+  }
+}

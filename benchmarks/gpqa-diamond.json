@@ -1,0 +1,39 @@
+{
+  "schema_version": "1.0.0",
+  "id": "gpqa-diamond",
+  "name": "GPQA Diamond",
+  "category": "reasoning",
+  "subcategory": "science",
+  "description": "Graduate-level Google-Proof Q&A benchmark with 198 curated PhD-level science questions in biology, physics, and chemistry requiring genuine domain expertise.",
+  "creator": "David Rein et al.",
+  "year_introduced": 2023,
+  "url": "https://artificialanalysis.ai/evaluations/gpqa-diamond",
+  "paper": "https://arxiv.org/abs/2311.12022",
+  "github": "https://github.com/idavidrein/gpqa",
+  "dataset": {
+    "num_problems": 198,
+    "source": "PhD-level science questions (biology, physics, chemistry)"
+  },
+  "metrics": [
+    {
+      "name": "accuracy",
+      "range": "0-100%",
+      "primary": true
+    },
+    {
+      "name": "human_expert_baseline",
+      "range": "65%",
+      "primary": false
+    }
+  ],
+  "saturation": "approaching",
+  "contamination_resistance": "high",
+  "adoption": "universal",
+  "tier": 1,
+  "reported_by": ["anthropic", "openai", "google", "deepseek", "xai"],
+  "notes": "198 highest-quality questions from 448-question GPQA main set. Approaching saturation at 90%+. Human experts: 65%.",
+  "meta": {
+    "created_at": "2026-02-07T12:00:00Z",
+    "updated_at": "2026-02-07T12:00:00Z"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "id": "gsm8k",
+  "name": "GSM8K",
+  "category": "reasoning",
+  "subcategory": "mathematics",
+  "description": "Grade school math benchmark with 8,500 multi-step word problems requiring elementary arithmetic and basic algebra (2-8 steps per problem).",
+  "creator": "OpenAI",
+  "year_introduced": 2021,
+  "github": "https://github.com/openai/grade-school-math",
+  "dataset": {
+    "num_problems": 8500,
+    "source": "Grade school math word problems"
+  },
+  "metrics": [
+    {
+      "name": "accuracy",
+      "range": "0-100%",
+      "primary": true
+    }
+  ],
+  "saturation": "saturated",
+  "contamination_resistance": "low",
+  "adoption": "universal",
+  "tier": 2,
+  "reported_by": ["openai", "anthropic", "google", "deepseek", "meta"],
+  "notes": "Heavily saturated - frontier models plateau around 95%+. GSM8K-Platinum (2026) variant addresses evaluation issues.",
+  "meta": {
+    "created_at": "2026-02-07T12:00:00Z",
+    "updated_at": "2026-02-07T12:00:00Z"
+  }
+}

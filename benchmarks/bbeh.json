@@ -1,0 +1,38 @@
+{
+  "schema_version": "1.0.0",
+  "id": "bbeh",
+  "name": "BIG-Bench Extra Hard",
+  "category": "reasoning",
+  "subcategory": "diverse-reasoning",
+  "description": "Adversarially calibrated successor to BIG-Bench Hard, replacing each BBH task with a harder analog. Tests algorithmic, logical, linguistic, and commonsense reasoning.",
+  "creator": "Google DeepMind",
+  "year_introduced": 2025,
+  "paper": "https://arxiv.org/abs/2502.19187",
+  "github": "https://github.com/google-deepmind/bbeh",
+  "dataset": {
+    "source": "Adversarially hardened versions of 23 BBH tasks"
+  },
+  "metrics": [
+    {
+      "name": "micro_average_accuracy",
+      "range": "0-100%",
+      "primary": true
+    },
+    {
+      "name": "harmonic_mean_accuracy",
+      "range": "0-100%",
+      "primary": false
+    }
+  ],
+  "saturation": "not_saturated",
+  "contamination_resistance": "high",
+  "adoption": "medium",
+  "tier": 1,
+  "reported_by": ["google", "anthropic", "openai"],
+  "related_benchmarks": ["bbh"],
+  "notes": "Best general model 23.9% (micro-avg), best reasoning model 54.2%. Created because BBH became saturated (90%+ for frontier models).",
+  "meta": {
+    "created_at": "2026-02-07T12:00:00Z",
+    "updated_at": "2026-02-07T12:00:00Z"
+  }
+}

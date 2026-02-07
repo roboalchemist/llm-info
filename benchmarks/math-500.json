@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.0.0",
+  "id": "math-500",
+  "name": "MATH-500",
+  "category": "reasoning",
+  "subcategory": "mathematics",
+  "description": "500-problem curated subset of the MATH dataset testing competition-level mathematical problem solving across algebra, geometry, number theory, intermediate algebra, precalculus, and probability.",
+  "creator": "Dan Hendrycks et al.",
+  "year_introduced": 2021,
+  "url": "https://github.com/hendrycks/math",
+  "paper": "https://arxiv.org/abs/2103.03874",
+  "dataset": {
+    "num_problems": 500,
+    "source": "Competition mathematics (AMC 10, AMC 12, AIME)"
+  },
+  "metrics": [
+    {
+      "name": "accuracy",
+      "range": "0-100%",
+      "primary": true
+    }
+  ],
+  "saturation": "saturated",
+  "contamination_resistance": "low",
+  "adoption": "universal",
+  "tier": 2,
+  "reported_by": ["openai", "anthropic", "google", "deepseek", "meta", "xai"],
+  "notes": "Curated 500-problem subset of 12,500-problem MATH dataset. Saturated - frontier models score 90%+. DeepSeek-R1: 97.3%.",
+  "meta": {
+    "created_at": "2026-02-07T12:00:00Z",
+    "updated_at": "2026-02-07T12:00:00Z"
+  }
+}

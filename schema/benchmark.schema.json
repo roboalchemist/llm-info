@@ -1,8 +1,8 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://example.com/benchmark/v1",
-  "title": "AI Coding Benchmark",
-  "description": "Schema for tracking coding and software engineering benchmarks used to evaluate AI models.",
+  "title": "AI Benchmark",
+  "description": "Schema for tracking benchmarks used to evaluate AI models across coding, reasoning, knowledge, multimodal, safety, long-context, and other categories.",
   "type": "object",
   "required": ["id", "name", "category", "schema_version"],
   "properties": {

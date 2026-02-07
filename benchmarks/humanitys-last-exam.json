@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.0.0",
+  "id": "humanitys-last-exam",
+  "name": "Humanity's Last Exam",
+  "category": "reasoning",
+  "subcategory": "expert-knowledge",
+  "description": "Expert-curated multi-modal benchmark with 2,500 questions across 100+ subjects designed to be the final closed-ended academic evaluation for frontier AI. 41% math, 14% require vision.",
+  "creator": "Center for AI Safety (CAIS)",
+  "year_introduced": 2025,
+  "url": "https://agi.safe.ai/",
+  "paper": "https://arxiv.org/abs/2501.14249",
+  "dataset": {
+    "num_problems": 2500,
+    "source": "1,000+ expert contributors across 100+ subjects"
+  },
+  "metrics": [
+    {
+      "name": "accuracy",
+      "range": "0-100%",
+      "primary": true
+    }
+  ],
+  "saturation": "not_saturated",
+  "contamination_resistance": "high",
+  "adoption": "high",
+  "tier": 1,
+  "reported_by": ["anthropic", "openai", "google"],
+  "notes": "Top: Gemini 3 Pro 37.2%, Claude Opus 4.6 36.7%, GPT-5.2 35.4%. ~30% of chemistry/biology answers may be incorrect per FutureHouse analysis.",
+  "meta": {
+    "created_at": "2026-02-07T12:00:00Z",
+    "updated_at": "2026-02-07T12:00:00Z"
+  }
+}

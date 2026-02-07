@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.0.0",
+  "id": "harmbench",
+  "name": "HarmBench",
+  "category": "safety",
+  "subcategory": "jailbreak-resistance",
+  "description": "Standardized evaluation framework for automated red teaming and robust refusal. De facto standard for measuring jailbreak resistance and safety. Tests attack success rates across multiple attack methods.",
+  "creator": "Safety Research Team",
+  "year_introduced": 2024,
+  "paper": "https://arxiv.org/abs/2402.04249",
+  "dataset": {
+    "source": "Comprehensive harmful behaviors for evaluating attack/defense strategies"
+  },
+  "metrics": [
+    {
+      "name": "attack_success_rate",
+      "range": "0-100%",
+      "primary": true
+    },
+    {
+      "name": "unsafe_response_rate",
+      "range": "0-100%",
+      "primary": false
+    }
+  ],
+  "saturation": "not_saturated",
+  "contamination_resistance": "high",
+  "adoption": "high",
+  "tier": 1,
+  "reported_by": ["anthropic", "openai", "google", "meta"],
+  "notes": "De facto standard for safety evaluation. Proprietary models: 15-25% ASR. Open-source: 30-50% ASR. Tests PAIR, TAP, PAP attacks.",
+  "meta": {
+    "created_at": "2026-02-07T12:00:00Z",
+    "updated_at": "2026-02-07T12:00:00Z"
+  }
+}

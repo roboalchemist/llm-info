@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.0.0",
+  "id": "mmmu-pro",
+  "name": "MMMU-Pro",
+  "category": "multimodal",
+  "subcategory": "academic",
+  "description": "Enhanced Massive Multi-discipline Multimodal Understanding benchmark with 3,460 college-level questions across 6 disciplines requiring joint vision and text reasoning.",
+  "creator": "MMMU Team",
+  "year_introduced": 2024,
+  "url": "https://mmmu-benchmark.github.io/",
+  "paper": "https://arxiv.org/abs/2409.02813",
+  "dataset": {
+    "num_problems": 3460,
+    "source": "College-level questions across 6 disciplines (Art, Business, Science, Medicine, Humanities, Engineering)"
+  },
+  "metrics": [
+    {
+      "name": "accuracy",
+      "range": "0-100%",
+      "primary": true
+    }
+  ],
+  "saturation": "not_saturated",
+  "contamination_resistance": "high",
+  "adoption": "high",
+  "tier": 1,
+  "reported_by": ["openai", "google", "anthropic", "meta"],
+  "notes": "Claude Opus 4.5: 80.7%. Open-source: InternVL3-78B 72.4%. Tests college-level multimodal reasoning.",
+  "meta": {
+    "created_at": "2026-02-07T12:00:00Z",
+    "updated_at": "2026-02-07T12:00:00Z"
+  }
+}

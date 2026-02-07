@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "id": "chartqa",
+  "name": "ChartQA",
+  "category": "multimodal",
+  "subcategory": "chart-understanding",
+  "description": "Chart question answering benchmark with 32,701 questions testing ability to understand and reason about data visualizations, charts, and graphs.",
+  "creator": "Masry et al.",
+  "year_introduced": 2022,
+  "paper": "https://arxiv.org/abs/2203.10244",
+  "dataset": {
+    "num_problems": 32701,
+    "source": "Questions about charts and data visualizations"
+  },
+  "metrics": [
+    {
+      "name": "accuracy",
+      "range": "0-100%",
+      "primary": true
+    }
+  ],
+  "saturation": "approaching",
+  "contamination_resistance": "medium",
+  "adoption": "high",
+  "tier": 2,
+  "reported_by": ["openai", "google", "anthropic", "meta"],
+  "notes": "Approaching saturation at 90.8%. One of the de facto standards for chart understanding evaluation.",
+  "meta": {
+    "created_at": "2026-02-07T12:00:00Z",
+    "updated_at": "2026-02-07T12:00:00Z"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.0.0",
+  "id": "bbh",
+  "name": "BIG-Bench Hard",
+  "category": "reasoning",
+  "subcategory": "diverse-reasoning",
+  "description": "23 challenging BIG-Bench tasks where language models previously failed to exceed human performance, testing algorithmic, logical, linguistic, and commonsense reasoning.",
+  "creator": "Google",
+  "year_introduced": 2022,
+  "paper": "https://arxiv.org/abs/2210.09261",
+  "github": "https://github.com/suzgunmirac/BIG-Bench-Hard",
+  "dataset": {
+    "source": "23 challenging tasks from BIG-Bench suite"
+  },
+  "metrics": [
+    {
+      "name": "accuracy",
+      "range": "0-100%",
+      "primary": true
+    }
+  ],
+  "saturation": "saturated",
+  "contamination_resistance": "low",
+  "adoption": "high",
+  "tier": 2,
+  "reported_by": ["google", "anthropic", "openai", "deepseek"],
+  "related_benchmarks": ["bbeh"],
+  "notes": "Saturated - frontier models achieve near-perfect scores. Superseded by BBEH.",
+  "meta": {
+    "created_at": "2026-02-07T12:00:00Z",
+    "updated_at": "2026-02-07T12:00:00Z"
+  }
+}

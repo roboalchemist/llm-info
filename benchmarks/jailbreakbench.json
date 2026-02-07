@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.0.0",
+  "id": "jailbreakbench",
+  "name": "JailbreakBench",
+  "category": "safety",
+  "subcategory": "jailbreak-resistance",
+  "description": "Standardized open robustness benchmark for jailbreaking with 200 distinct behaviors curated from AdvBench, HarmBench, and Trojan Detection Challenge. Includes artifact repository and evaluation framework.",
+  "creator": "JailbreakBench Team",
+  "year_introduced": 2024,
+  "url": "https://jailbreakbench.github.io/",
+  "paper": "https://arxiv.org/abs/2404.01318",
+  "github": "https://github.com/JailbreakBench/jailbreakbench",
+  "dataset": {
+    "num_problems": 200,
+    "source": "Curated from AdvBench, HarmBench, Trojan Detection Challenge",
+    "huggingface": "https://huggingface.co/datasets/JailbreakBench/JBB-Behaviors"
+  },
+  "metrics": [
+    {
+      "name": "attack_success_rate",
+      "range": "0-100%",
+      "primary": true
+    }
+  ],
+  "saturation": "not_saturated",
+  "contamination_resistance": "high",
+  "adoption": "medium",
+  "tier": 2,
+  "reported_by": ["anthropic", "openai", "google", "meta"],
+  "related_benchmarks": ["harmbench"],
+  "notes": "NeurIPS 2024 Datasets & Benchmarks. 200 behaviors with jailbreak artifact repository and standardized evaluation.",
+  "meta": {
+    "created_at": "2026-02-07T12:00:00Z",
+    "updated_at": "2026-02-07T12:00:00Z"
+  }
+}

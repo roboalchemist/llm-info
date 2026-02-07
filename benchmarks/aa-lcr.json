@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.0.0",
+  "id": "aa-lcr",
+  "name": "AA-LCR",
+  "category": "long_context",
+  "subcategory": "context-reasoning",
+  "description": "Artificial Analysis Long Context Reasoning benchmark with 100 hard text-based reasoning questions requiring synthesis across ~100K tokens of multi-document input spanning 7 document categories.",
+  "creator": "Artificial Analysis",
+  "year_introduced": 2025,
+  "url": "https://artificialanalysis.ai/evaluations/artificial-analysis-long-context-reasoning",
+  "dataset": {
+    "num_problems": 100,
+    "source": "Real knowledge work across 7 document categories (~100K tokens)",
+    "huggingface": "https://huggingface.co/datasets/ArtificialAnalysis/AA-LCR"
+  },
+  "metrics": [
+    {
+      "name": "accuracy",
+      "range": "0-100%",
+      "primary": true
+    }
+  ],
+  "saturation": "not_saturated",
+  "contamination_resistance": "high",
+  "adoption": "medium",
+  "tier": 2,
+  "reported_by": ["openai", "google", "xai", "anthropic"],
+  "notes": "Top: o3 69%, Grok 4 68%, Qwen3 235B 67%. Human validation: 40-60% accuracy on first attempt. Tests real knowledge work reasoning.",
+  "meta": {
+    "created_at": "2026-02-07T12:00:00Z",
+    "updated_at": "2026-02-07T12:00:00Z"
+  }
+}

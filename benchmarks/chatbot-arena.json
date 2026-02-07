@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "id": "chatbot-arena",
+  "name": "Chatbot Arena",
+  "category": "knowledge",
+  "subcategory": "human-preference",
+  "description": "Crowdsourced human preference ranking via anonymous pairwise model comparisons. The gold standard for measuring real-world model quality. Specialized leaderboards for coding, long-context, multimodal, etc.",
+  "creator": "LMSYS (UC Berkeley)",
+  "year_introduced": 2023,
+  "url": "https://arena.ai/leaderboard/",
+  "paper": "https://arxiv.org/abs/2403.04132",
+  "dataset": {
+    "source": "Thousands of live user conversations via pairwise comparison"
+  },
+  "metrics": [
+    {
+      "name": "elo_rating",
+      "range": "900-2000+",
+      "primary": true
+    }
+  ],
+  "saturation": "not_saturated",
+  "contamination_resistance": "high",
+  "adoption": "universal",
+  "tier": 1,
+  "reported_by": ["openai", "anthropic", "google", "meta", "deepseek", "xai"],
+  "notes": "Gold standard human-preference ranking. Continuously updated. Specialized leaderboards for coding, reasoning, multimodal.",
+  "meta": {
+    "created_at": "2026-02-07T12:00:00Z",
+    "updated_at": "2026-02-07T12:00:00Z"
+  }
+}
