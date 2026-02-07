@@ -1,0 +1,85 @@
+{
+  "schema_version": "1.0.0",
+  "id": "claude-opus-4-5",
+  "name": "Claude Opus 4.5",
+  "provider": {
+    "name": "Anthropic",
+    "url": "https://www.anthropic.com",
+    "country": "US"
+  },
+  "release_date": "2025-12-01",
+  "status": "ga",
+  "description": "Advanced language model from Anthropic featuring extended thinking capabilities and improved reasoning performance. Designed for complex problem-solving and software engineering tasks.",
+
+  "sources": {
+    "blog_post": "https://www.anthropic.com/news/claude-opus-4-5",
+    "api_docs": "https://docs.anthropic.com"
+  },
+
+  "license": {
+    "name": "proprietary",
+    "commercial_use": true,
+    "open_weights": false
+  },
+
+  "architecture": {
+    "type": "dense",
+    "family": "Transformer",
+    "modalities": {
+      "input": ["text", "image", "code"],
+      "output": ["text", "code"]
+    }
+  },
+
+  "benchmarks": [
+    {
+      "name": "SWE-bench Verified",
+      "category": "coding",
+      "score": 80.9,
+      "score_unit": "percent",
+      "methodology": {
+        "num_trials": 10,
+        "thinking_budget": "200K",
+        "notes": "Averaged over 10 trials with 200K thinking budget on 500-problem dataset"
+      },
+      "source_url": "https://www.anthropic.com/news/claude-opus-4-5"
+    }
+  ],
+
+  "safety": {
+    "metrics": [
+      {
+        "name": "harmlessness_rate",
+        "score": 99.78,
+        "description": "Percentage of responses rated as harmless"
+      },
+      {
+        "name": "agentic_safety_refusal",
+        "score": 88.39,
+        "description": "Agentic safety refusal rate"
+      }
+    ]
+  },
+
+  "capabilities": {
+    "tool_calling": true,
+    "function_calling": true,
+    "thinking_modes": ["standard", "thinking"]
+  },
+
+  "intended_use": {
+    "primary_uses": ["agentic_coding", "complex_reasoning", "code_generation", "research"]
+  },
+
+  "limitations": ["hallucinations", "knowledge_cutoff"],
+
+  "related_models": [
+    { "id": "claude-opus-4", "relationship": "successor" }
+  ],
+
+  "meta": {
+    "created_at": "2026-02-07T12:00:00Z",
+    "updated_at": "2026-02-07T12:00:00Z",
+    "created_by": "research-agent"
+  }
+}

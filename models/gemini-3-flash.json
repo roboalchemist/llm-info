@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0.0",
+  "id": "gemini-3-flash",
+  "name": "Gemini 3 Flash",
+  "provider": {
+    "name": "Google DeepMind",
+    "url": "https://deepmind.google",
+    "country": "US"
+  },
+  "release_date": "2026-01-01",
+  "status": "ga",
+  "description": "Fast and efficient multimodal model supporting text, code, images, video, and audio inputs with strong coding capabilities.",
+
+  "sources": {
+    "blog_post": "https://blog.google/products-and-platforms/products/gemini/gemini-3-flash/"
+  },
+
+  "license": {
+    "name": "Proprietary",
+    "commercial_use": true,
+    "open_weights": false
+  },
+
+  "architecture": {
+    "type": "dense",
+    "family": "Transformer",
+    "modalities": {
+      "input": ["text", "image", "video", "audio", "code"],
+      "output": ["text", "code"]
+    }
+  },
+
+  "benchmarks": [
+    {
+      "name": "SWE-bench Verified",
+      "category": "coding",
+      "score": 78.0,
+      "score_unit": "percent",
+      "methodology": {
+        "notes": "Range reported: 76.2%-78.0%"
+      },
+      "source_url": "https://blog.google/products-and-platforms/products/gemini/gemini-3-flash/"
+    }
+  ],
+
+  "capabilities": {
+    "tool_calling": true,
+    "function_calling": true
+  },
+
+  "intended_use": {
+    "primary_uses": ["conversational", "code_generation", "multimodal_understanding"],
+    "out_of_scope": []
+  },
+
+  "meta": {
+    "created_at": "2026-02-07T12:00:00Z",
+    "updated_at": "2026-02-07T12:00:00Z",
+    "created_by": "research-agent"
+  }
+}

@@ -1,0 +1,381 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/model-card/v1",
+  "title": "AI Model Card",
+  "description": "Standardized schema for tracking AI model metadata, capabilities, benchmarks, and safety information. Derived from Mitchell et al. (2019), HuggingFace model card standard, EU AI Act, and real model cards from Anthropic, OpenAI, Google, Meta, Moonshot, MiniMax, Zhipu, and Alibaba.",
+  "type": "object",
+  "required": ["id", "name", "provider", "release_date", "schema_version"],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "1.0.0"
+    },
+    "id": {
+      "type": "string",
+      "description": "Unique slug identifier, e.g. 'claude-opus-4-5' or 'gpt-5-2-thinking'"
+    },
+    "name": {
+      "type": "string",
+      "description": "Human-readable model name, e.g. 'Claude Opus 4.5'"
+    },
+    "provider": {
+      "type": "object",
+      "required": ["name"],
+      "properties": {
+        "name": { "type": "string", "description": "Organization name, e.g. 'Anthropic'" },
+        "url": { "type": "string", "format": "uri" },
+        "country": { "type": "string", "description": "ISO 3166-1 alpha-2 country code" }
+      }
+    },
+    "release_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Public release date (YYYY-MM-DD)"
+    },
+    "knowledge_cutoff": {
+      "type": "string",
+      "format": "date",
+      "description": "Training data knowledge cutoff date"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["preview", "ga", "deprecated", "retired"],
+      "description": "Current availability status"
+    },
+
+    "description": {
+      "type": "string",
+      "description": "Brief model description (1-3 sentences)"
+    },
+
+    "sources": {
+      "type": "object",
+      "description": "Where to find authoritative information about this model",
+      "properties": {
+        "model_card": { "type": "string", "format": "uri", "description": "Primary model card URL" },
+        "system_card": { "type": "string", "format": "uri", "description": "Safety/system card PDF or page" },
+        "technical_report": { "type": "string", "format": "uri", "description": "arXiv or technical report URL" },
+        "blog_post": { "type": "string", "format": "uri", "description": "Launch announcement blog post" },
+        "huggingface": { "type": "string", "format": "uri", "description": "HuggingFace model page" },
+        "github": { "type": "string", "format": "uri", "description": "GitHub repository" },
+        "api_docs": { "type": "string", "format": "uri", "description": "API documentation" },
+        "other": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "label": { "type": "string" },
+              "url": { "type": "string", "format": "uri" }
+            }
+          }
+        }
+      }
+    },
+
+    "license": {
+      "type": "object",
+      "properties": {
+        "spdx_id": { "type": "string", "description": "SPDX license identifier, e.g. 'MIT', 'Apache-2.0'" },
+        "name": { "type": "string", "description": "Human-readable license name if non-standard" },
+        "url": { "type": "string", "format": "uri" },
+        "commercial_use": { "type": "boolean" },
+        "open_weights": { "type": "boolean" }
+      }
+    },
+
+    "architecture": {
+      "type": "object",
+      "description": "Model architecture and technical specifications",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": ["dense", "moe", "hybrid-moe", "ssm", "hybrid-ssm", "other"],
+          "description": "High-level architecture type"
+        },
+        "family": { "type": "string", "description": "Architecture family, e.g. 'Transformer', 'Mamba', 'GLM4_MoE'" },
+        "total_params": { "type": "string", "description": "Total parameter count, e.g. '1T', '480B', '80B'" },
+        "active_params": { "type": "string", "description": "Activated parameters per token (for MoE), e.g. '32B', '3B'" },
+        "layers": { "type": "integer" },
+        "hidden_dim": { "type": "integer" },
+        "attention_heads": { "type": "integer" },
+        "kv_heads": { "type": "integer", "description": "Key-value heads (for GQA/MQA)" },
+        "vocab_size": { "type": "integer" },
+        "context_length": { "type": "integer", "description": "Native context window in tokens" },
+        "max_context_length": { "type": "integer", "description": "Extended context via RoPE/YaRN etc." },
+        "attention_mechanism": { "type": "string", "description": "e.g. 'MHA', 'GQA', 'MLA', 'MQA'" },
+        "activation_function": { "type": "string", "description": "e.g. 'SwiGLU', 'GELU'" },
+        "moe": {
+          "type": "object",
+          "description": "Mixture-of-Experts details (if applicable)",
+          "properties": {
+            "total_experts": { "type": "integer" },
+            "active_experts": { "type": "integer" },
+            "shared_experts": { "type": "integer" }
+          }
+        },
+        "vision_encoder": {
+          "type": "object",
+          "description": "Vision encoder details (if multimodal)",
+          "properties": {
+            "name": { "type": "string" },
+            "params": { "type": "string" }
+          }
+        },
+        "modalities": {
+          "type": "object",
+          "description": "Supported input/output modalities",
+          "properties": {
+            "input": {
+              "type": "array",
+              "items": { "type": "string", "enum": ["text", "image", "video", "audio", "code", "files"] }
+            },
+            "output": {
+              "type": "array",
+              "items": { "type": "string", "enum": ["text", "image", "video", "audio", "code"] }
+            }
+          }
+        }
+      }
+    },
+
+    "training": {
+      "type": "object",
+      "description": "Training data and compute details",
+      "properties": {
+        "tokens": { "type": "string", "description": "Total training tokens, e.g. '15T', '7.5T'" },
+        "data_composition": {
+          "type": "object",
+          "description": "Rough breakdown of training data by type",
+          "additionalProperties": { "type": "number", "description": "Percentage (0-100)" }
+        },
+        "data_sources": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "General data source categories, e.g. ['public web', 'licensed', 'synthetic']"
+        },
+        "languages": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Supported/trained languages (ISO 639-1 codes)"
+        },
+        "methodology": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Training techniques, e.g. ['SFT', 'RLHF', 'DPO', 'Code RL', 'Agent RL']"
+        },
+        "compute": {
+          "type": "object",
+          "properties": {
+            "hardware": { "type": "string", "description": "e.g. 'H100-80GB', 'TPUv5p'" },
+            "gpu_hours": { "type": "number" },
+            "co2_tons": { "type": "number", "description": "Estimated CO2 emissions in metric tons" }
+          }
+        }
+      }
+    },
+
+    "inference": {
+      "type": "object",
+      "description": "Recommended inference configuration",
+      "properties": {
+        "default_params": {
+          "type": "object",
+          "properties": {
+            "temperature": { "type": "number" },
+            "top_p": { "type": "number" },
+            "top_k": { "type": "integer" },
+            "max_tokens": { "type": "integer" }
+          }
+        },
+        "frameworks": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Supported inference frameworks, e.g. ['vLLM', 'SGLang', 'Transformers', 'MLX']"
+        },
+        "quantizations": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Available quantization formats, e.g. ['BF16', 'FP8', 'INT4', 'GGUF-Q4_K_M']"
+        },
+        "api_compatible": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "API compatibility, e.g. ['openai', 'anthropic']"
+        }
+      }
+    },
+
+    "pricing": {
+      "type": "object",
+      "description": "API pricing (if applicable), in USD per million tokens",
+      "properties": {
+        "input_per_mtok": { "type": "number" },
+        "output_per_mtok": { "type": "number" },
+        "cached_input_per_mtok": { "type": "number" },
+        "as_of": { "type": "string", "format": "date" }
+      }
+    },
+
+    "benchmarks": {
+      "type": "array",
+      "description": "Evaluation results across standardized benchmarks",
+      "items": {
+        "type": "object",
+        "required": ["name", "score"],
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Benchmark name, e.g. 'SWE-bench Verified'"
+          },
+          "category": {
+            "type": "string",
+            "enum": ["coding", "reasoning", "knowledge", "multimodal", "safety", "agent", "long_context", "multilingual", "other"],
+            "description": "Benchmark category"
+          },
+          "score": {
+            "type": "number",
+            "description": "Primary score (typically percentage 0-100)"
+          },
+          "score_unit": {
+            "type": "string",
+            "default": "percent",
+            "description": "Unit of score, e.g. 'percent', 'elo', 'points', 'pass@1'"
+          },
+          "max_score": {
+            "type": "number",
+            "description": "Maximum possible score (if not 100)"
+          },
+          "methodology": {
+            "type": "object",
+            "description": "How the evaluation was conducted",
+            "properties": {
+              "scaffolding": { "type": "string", "description": "Agent framework used, e.g. 'OpenHands', 'SWE-Agent', 'Claude Code'" },
+              "num_trials": { "type": "integer", "description": "Number of trials averaged" },
+              "pass_at": { "type": "integer", "description": "pass@k value" },
+              "thinking_budget": { "type": "string", "description": "Thinking token budget, e.g. '200K'" },
+              "context_used": { "type": "string", "description": "Context window used if relevant" },
+              "notes": { "type": "string" }
+            }
+          },
+          "date_evaluated": {
+            "type": "string",
+            "format": "date"
+          },
+          "source_url": {
+            "type": "string",
+            "format": "uri",
+            "description": "Where this specific result is reported"
+          }
+        }
+      }
+    },
+
+    "safety": {
+      "type": "object",
+      "description": "Safety evaluation and red teaming information",
+      "properties": {
+        "red_teaming": {
+          "type": "object",
+          "properties": {
+            "hours": { "type": "number" },
+            "num_testers": { "type": "integer" },
+            "methodology": { "type": "string" }
+          }
+        },
+        "metrics": {
+          "type": "array",
+          "description": "Quantitative safety metrics",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": { "type": "string", "description": "e.g. 'harmlessness_rate', 'agentic_safety_refusal', 'prompt_injection_robustness'" },
+              "score": { "type": "number" },
+              "description": { "type": "string" }
+            }
+          }
+        },
+        "policies": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Safety policies, e.g. ['CSAM', 'hate_speech', 'dangerous_content', 'harassment']"
+        },
+        "risk_assessments": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Risk domains evaluated, e.g. ['CBRNE', 'cyber_attack', 'child_safety', 'mental_health']"
+        }
+      }
+    },
+
+    "capabilities": {
+      "type": "object",
+      "description": "High-level capability flags",
+      "properties": {
+        "tool_calling": { "type": "boolean" },
+        "function_calling": { "type": "boolean" },
+        "code_execution": { "type": "boolean" },
+        "web_browsing": { "type": "boolean" },
+        "file_handling": { "type": "boolean" },
+        "thinking_modes": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "e.g. ['standard', 'thinking', 'interleaved', 'instant']"
+        },
+        "agent_features": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "e.g. ['multi-step', 'parallel_agents', 'agent_swarm']"
+        },
+        "programming_languages": {
+          "type": "integer",
+          "description": "Number of programming languages supported (if claimed)"
+        }
+      }
+    },
+
+    "intended_use": {
+      "type": "object",
+      "properties": {
+        "primary_uses": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "e.g. ['code_generation', 'conversational', 'agentic_coding', 'research']"
+        },
+        "out_of_scope": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Explicitly out-of-scope uses"
+        }
+      }
+    },
+
+    "limitations": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Known limitations, e.g. ['hallucinations', 'knowledge_cutoff', 'long_latency']"
+    },
+
+    "related_models": {
+      "type": "array",
+      "description": "Links to predecessor, successor, or variant models",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "string" },
+          "relationship": { "type": "string", "enum": ["predecessor", "successor", "base_model", "variant", "distillation"] }
+        }
+      }
+    },
+
+    "meta": {
+      "type": "object",
+      "description": "Record-keeping metadata",
+      "properties": {
+        "created_at": { "type": "string", "format": "date-time" },
+        "updated_at": { "type": "string", "format": "date-time" },
+        "created_by": { "type": "string" },
+        "notes": { "type": "string" }
+      }
+    }
+  }
+}

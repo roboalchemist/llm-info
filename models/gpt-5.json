@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.0.0",
+  "id": "gpt-5",
+  "name": "GPT-5",
+  "provider": {
+    "name": "OpenAI",
+    "url": "https://openai.com",
+    "country": "US"
+  },
+  "release_date": "2025-08-01",
+  "status": "ga",
+  "description": "OpenAI's flagship model offering improved reasoning, coding, and general task performance with significant efficiency gains over previous generations.",
+
+  "sources": {
+    "blog_post": "https://openai.com/index/introducing-gpt-5/",
+    "system_card": "https://openai.com/index/gpt-5-system-card/"
+  },
+
+  "license": {
+    "name": "proprietary",
+    "commercial_use": true,
+    "open_weights": false
+  },
+
+  "architecture": {
+    "type": "dense",
+    "family": "Transformer",
+    "modalities": {
+      "input": ["text", "image", "code"],
+      "output": ["text", "code"]
+    }
+  },
+
+  "benchmarks": [
+    {
+      "name": "SWE-bench Verified",
+      "category": "coding",
+      "score": 74.9,
+      "score_unit": "percent",
+      "methodology": {
+        "notes": "Achieves 22% fewer tokens and 45% fewer tool calls compared to o3"
+      },
+      "source_url": "https://openai.com/index/introducing-gpt-5/"
+    }
+  ],
+
+  "safety": {
+    "red_teaming": {
+      "hours": 5000,
+      "num_testers": 400,
+      "methodology": "External red teaming with diverse testers"
+    }
+  },
+
+  "capabilities": {
+    "tool_calling": true,
+    "function_calling": true
+  },
+
+  "intended_use": {
+    "primary_uses": ["code_generation", "reasoning", "conversational", "research"]
+  },
+
+  "limitations": ["hallucinations", "knowledge_cutoff"],
+
+  "meta": {
+    "created_at": "2026-02-07T12:00:00Z",
+    "updated_at": "2026-02-07T12:00:00Z",
+    "created_by": "research-agent",
+    "notes": "Red teaming involved 5000+ hours with 400+ external testers; efficiency metrics compared to o3 baseline"
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.0.0",
+  "id": "o3-mini",
+  "name": "o3-mini",
+  "provider": {
+    "name": "OpenAI",
+    "url": "https://openai.com",
+    "country": "US"
+  },
+  "release_date": "2025-01-01",
+  "status": "ga",
+  "description": "Efficient lightweight reasoning model from OpenAI's reasoning family, suitable for cost-conscious applications.",
+
+  "sources": {
+    "blog_post": "https://openai.com/index/openai-o3-mini/"
+  },
+
+  "license": {
+    "name": "proprietary",
+    "commercial_use": true,
+    "open_weights": false
+  },
+
+  "architecture": {
+    "type": "dense",
+    "family": "Transformer",
+    "modalities": {
+      "input": ["text", "image", "code"],
+      "output": ["text", "code"]
+    }
+  },
+
+  "benchmarks": [
+    {
+      "name": "SWE-bench Verified",
+      "category": "coding",
+      "score": 49.3,
+      "score_unit": "percent",
+      "source_url": "https://openai.com/index/openai-o3-mini/"
+    }
+  ],
+
+  "capabilities": {
+    "tool_calling": true,
+    "function_calling": true,
+    "thinking_modes": ["reasoning"]
+  },
+
+  "intended_use": {
+    "primary_uses": ["code_generation", "reasoning", "conversational"]
+  },
+
+  "limitations": ["hallucinations", "knowledge_cutoff"],
+
+  "meta": {
+    "created_at": "2026-02-07T12:00:00Z",
+    "updated_at": "2026-02-07T12:00:00Z",
+    "created_by": "research-agent"
+  }
+}

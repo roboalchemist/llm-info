@@ -1,0 +1,166 @@
+{
+  "schema_version": "1.0.0",
+  "id": "kimi-k2-5",
+  "name": "Kimi K2.5",
+  "provider": {
+    "name": "Moonshot AI",
+    "url": "https://www.kimi.com",
+    "country": "CN"
+  },
+  "release_date": "2026-01-27",
+  "knowledge_cutoff": "2025-06-01",
+  "status": "ga",
+  "description": "Open-source multimodal agentic model with 1T total parameters and 32B active, featuring Agent Swarm technology for parallel agent coordination.",
+
+  "sources": {
+    "model_card": "https://huggingface.co/moonshotai/Kimi-K2.5",
+    "technical_report": "https://arxiv.org/abs/2602.02276",
+    "blog_post": "https://www.kimi.com/blog/kimi-k2-5.html",
+    "huggingface": "https://huggingface.co/moonshotai/Kimi-K2.5",
+    "other": [
+      { "label": "TechCrunch coverage", "url": "https://techcrunch.com/2026/01/27/chinas-moonshot-releases-a-new-open-source-model-kimi-k2-5-and-a-coding-agent/" },
+      { "label": "NVIDIA NIM", "url": "https://build.nvidia.com/moonshotai/kimi-k2-5/modelcard" }
+    ]
+  },
+
+  "license": {
+    "spdx_id": "MIT",
+    "url": "https://opensource.org/licenses/MIT",
+    "commercial_use": true,
+    "open_weights": true
+  },
+
+  "architecture": {
+    "type": "moe",
+    "family": "Transformer",
+    "total_params": "1T",
+    "active_params": "32B",
+    "layers": 61,
+    "hidden_dim": 7168,
+    "attention_heads": 64,
+    "vocab_size": 160000,
+    "context_length": 262144,
+    "attention_mechanism": "MLA",
+    "activation_function": "SwiGLU",
+    "moe": {
+      "total_experts": 384,
+      "active_experts": 8,
+      "shared_experts": 0
+    },
+    "vision_encoder": {
+      "name": "MoonViT",
+      "params": "400M"
+    },
+    "modalities": {
+      "input": ["text", "image", "video", "code"],
+      "output": ["text", "code"]
+    }
+  },
+
+  "training": {
+    "tokens": "15T",
+    "data_composition": {
+      "code": 40,
+      "text": 45,
+      "visual": 15
+    },
+    "data_sources": ["public web", "synthetic", "visual-text mixed"],
+    "languages": ["en", "zh"],
+    "methodology": ["SFT", "RLHF"]
+  },
+
+  "inference": {
+    "default_params": {
+      "temperature": 1.0,
+      "top_p": 0.95
+    },
+    "frameworks": ["vLLM", "SGLang", "Transformers"],
+    "quantizations": ["BF16", "INT4"]
+  },
+
+  "benchmarks": [
+    {
+      "name": "SWE-bench Verified",
+      "category": "coding",
+      "score": 76.8,
+      "score_unit": "percent",
+      "methodology": {
+        "scaffolding": "internal (minimal toolset: bash, createfile, insert, view, strreplace, submit)",
+        "num_trials": 5,
+        "pass_at": 1,
+        "notes": "Best results in non-thinking mode"
+      },
+      "date_evaluated": "2026-01-27",
+      "source_url": "https://huggingface.co/moonshotai/Kimi-K2.5"
+    },
+    {
+      "name": "SWE-bench Multilingual",
+      "category": "coding",
+      "score": 73.0,
+      "score_unit": "percent",
+      "source_url": "https://huggingface.co/moonshotai/Kimi-K2.5"
+    },
+    {
+      "name": "LiveCodeBench",
+      "category": "coding",
+      "score": 85.0,
+      "score_unit": "percent",
+      "source_url": "https://huggingface.co/moonshotai/Kimi-K2.5"
+    },
+    {
+      "name": "GPQA Diamond",
+      "category": "reasoning",
+      "score": 71.2,
+      "score_unit": "percent",
+      "source_url": "https://huggingface.co/moonshotai/Kimi-K2.5"
+    },
+    {
+      "name": "MMLU-Pro",
+      "category": "knowledge",
+      "score": 82.1,
+      "score_unit": "percent",
+      "source_url": "https://huggingface.co/moonshotai/Kimi-K2.5"
+    },
+    {
+      "name": "MMMU-Pro",
+      "category": "multimodal",
+      "score": 62.5,
+      "score_unit": "percent",
+      "source_url": "https://huggingface.co/moonshotai/Kimi-K2.5"
+    }
+  ],
+
+  "safety": {
+    "policies": ["content_filtering", "harmful_content"],
+    "risk_assessments": ["general"]
+  },
+
+  "capabilities": {
+    "tool_calling": true,
+    "function_calling": true,
+    "code_execution": true,
+    "web_browsing": true,
+    "thinking_modes": ["thinking", "instant"],
+    "agent_features": ["multi-step", "agent_swarm"],
+    "programming_languages": 370
+  },
+
+  "intended_use": {
+    "primary_uses": ["agentic_coding", "conversational", "multimodal_understanding", "research"],
+    "out_of_scope": []
+  },
+
+  "limitations": ["hallucinations", "knowledge_cutoff"],
+
+  "related_models": [
+    { "id": "kimi-k2", "relationship": "predecessor" },
+    { "id": "kimi-k2-5-base", "relationship": "base_model" }
+  ],
+
+  "meta": {
+    "created_at": "2026-02-07T12:00:00Z",
+    "updated_at": "2026-02-07T12:00:00Z",
+    "created_by": "research-agent",
+    "notes": "Scores from HuggingFace model card; some benchmark scores are approximate"
+  }
+}

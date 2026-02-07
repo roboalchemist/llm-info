@@ -1,0 +1,95 @@
+{
+  "schema_version": "1.0.0",
+  "id": "minimax-m2-1",
+  "name": "MiniMax-M2.1",
+  "provider": {
+    "name": "MiniMax",
+    "url": "https://www.minimax.io",
+    "country": "CN"
+  },
+  "release_date": "2025-12-23",
+  "status": "ga",
+  "description": "Open-source mixture-of-experts model with 229B total parameters and 10B active, optimized for software engineering tasks.",
+
+  "sources": {
+    "huggingface": "https://huggingface.co/MiniMaxAI/MiniMax-M2.1",
+    "blog_post": "https://www.minimax.io/news/minimax-m21",
+    "github": "https://github.com/MiniMax-AI/MiniMax-M2.1"
+  },
+
+  "license": {
+    "spdx_id": "MIT",
+    "name": "Modified-MIT",
+    "commercial_use": true,
+    "open_weights": true
+  },
+
+  "architecture": {
+    "type": "moe",
+    "family": "Transformer",
+    "total_params": "229B",
+    "active_params": "10B",
+    "activation_function": "SwiGLU",
+    "modalities": {
+      "input": ["text", "code"],
+      "output": ["text", "code"]
+    }
+  },
+
+  "inference": {
+    "default_params": {
+      "temperature": 1.0,
+      "top_p": 0.95,
+      "top_k": 40
+    },
+    "frameworks": ["SGLang", "vLLM", "Transformers", "MLX-LM", "KTransformers"]
+  },
+
+  "benchmarks": [
+    {
+      "name": "SWE-bench Verified",
+      "category": "coding",
+      "score": 74.0,
+      "score_unit": "percent",
+      "methodology": {
+        "scaffolding": "Claude Code",
+        "num_trials": 4
+      }
+    },
+    {
+      "name": "Multi-SWE-bench",
+      "category": "multilingual",
+      "score": 49.4,
+      "score_unit": "percent"
+    },
+    {
+      "name": "SWE-bench Multilingual",
+      "category": "multilingual",
+      "score": 72.5,
+      "score_unit": "percent"
+    },
+    {
+      "name": "Terminal-bench 2.0",
+      "category": "agent",
+      "score": 47.9,
+      "score_unit": "percent"
+    }
+  ],
+
+  "capabilities": {
+    "tool_calling": true,
+    "function_calling": true,
+    "code_execution": true
+  },
+
+  "intended_use": {
+    "primary_uses": ["code_generation", "software_engineering", "agentic_coding"],
+    "out_of_scope": []
+  },
+
+  "meta": {
+    "created_at": "2026-02-07T12:00:00Z",
+    "updated_at": "2026-02-07T12:00:00Z",
+    "created_by": "research-agent"
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.0.0",
+  "id": "o3",
+  "name": "o3",
+  "provider": {
+    "name": "OpenAI",
+    "url": "https://openai.com",
+    "country": "US"
+  },
+  "release_date": "2025-01-01",
+  "status": "ga",
+  "description": "OpenAI's reasoning model with advanced problem-solving capabilities through extended reasoning chains.",
+
+  "sources": {
+    "blog_post": "https://openai.com/index/introducing-o3-and-o4-mini/"
+  },
+
+  "license": {
+    "name": "proprietary",
+    "commercial_use": true,
+    "open_weights": false
+  },
+
+  "architecture": {
+    "type": "dense",
+    "family": "Transformer",
+    "modalities": {
+      "input": ["text", "image", "code"],
+      "output": ["text", "code"]
+    }
+  },
+
+  "benchmarks": [
+    {
+      "name": "SWE-bench Verified",
+      "category": "coding",
+      "score": 71.7,
+      "score_unit": "percent",
+      "methodology": {
+        "notes": "Some sources report 69.1%; both values documented for reference"
+      },
+      "source_url": "https://openai.com/index/introducing-o3-and-o4-mini/"
+    }
+  ],
+
+  "capabilities": {
+    "tool_calling": true,
+    "function_calling": true,
+    "thinking_modes": ["reasoning"]
+  },
+
+  "intended_use": {
+    "primary_uses": ["code_generation", "reasoning", "problem_solving", "research"]
+  },
+
+  "limitations": ["hallucinations", "knowledge_cutoff"],
+
+  "meta": {
+    "created_at": "2026-02-07T12:00:00Z",
+    "updated_at": "2026-02-07T12:00:00Z",
+    "created_by": "research-agent",
+    "notes": "SWE-bench Verified score: primary value 71.7%, alternative source reports 69.1%"
+  }
+}

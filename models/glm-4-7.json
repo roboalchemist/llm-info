@@ -1,0 +1,101 @@
+{
+  "schema_version": "1.0.0",
+  "id": "glm-4-7",
+  "name": "GLM-4.7",
+  "provider": {
+    "name": "Zhipu AI",
+    "url": "https://z.ai",
+    "country": "CN"
+  },
+  "release_date": "2025-12-22",
+  "status": "ga",
+  "description": "Open-source mixture-of-experts model with 400B total parameters, featuring extended context window and interleaved thinking capabilities.",
+
+  "sources": {
+    "huggingface": "https://huggingface.co/zai-org/GLM-4.7",
+    "blog_post": "https://z.ai/blog/glm-4.7",
+    "api_docs": "https://docs.z.ai/guides/llm/glm-4.7",
+    "technical_report": "https://arxiv.org/abs/2508.06471"
+  },
+
+  "license": {
+    "spdx_id": "MIT",
+    "commercial_use": true,
+    "open_weights": true
+  },
+
+  "architecture": {
+    "type": "moe",
+    "family": "GLM4_MoE",
+    "total_params": "400B",
+    "context_length": 200000,
+    "modalities": {
+      "input": ["text", "code"],
+      "output": ["text", "code"]
+    }
+  },
+
+  "training": {
+    "languages": ["en", "zh"]
+  },
+
+  "inference": {
+    "default_params": {
+      "temperature": 0.7,
+      "top_p": 1.0,
+      "max_tokens": 16384
+    },
+    "frameworks": ["vLLM", "SGLang", "Transformers"]
+  },
+
+  "benchmarks": [
+    {
+      "name": "SWE-bench Verified",
+      "category": "coding",
+      "score": 73.8,
+      "score_unit": "percent"
+    },
+    {
+      "name": "SWE-bench Multilingual",
+      "category": "multilingual",
+      "score": 66.7,
+      "score_unit": "percent"
+    },
+    {
+      "name": "LiveCodeBench-v6",
+      "category": "coding",
+      "score": 84.9,
+      "score_unit": "percent"
+    },
+    {
+      "name": "Terminal Bench 2.0",
+      "category": "agent",
+      "score": 41.0,
+      "score_unit": "percent"
+    },
+    {
+      "name": "HLE",
+      "category": "other",
+      "score": 42.8,
+      "score_unit": "percent"
+    }
+  ],
+
+  "capabilities": {
+    "tool_calling": true,
+    "function_calling": true,
+    "code_execution": true,
+    "thinking_modes": ["interleaved", "preserved", "turn-level"]
+  },
+
+  "intended_use": {
+    "primary_uses": ["code_generation", "agentic_coding", "reasoning"],
+    "out_of_scope": []
+  },
+
+  "meta": {
+    "created_at": "2026-02-07T12:00:00Z",
+    "updated_at": "2026-02-07T12:00:00Z",
+    "created_by": "research-agent"
+  }
+}

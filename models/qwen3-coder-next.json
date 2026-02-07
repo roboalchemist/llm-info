@@ -1,0 +1,107 @@
+{
+  "schema_version": "1.0.0",
+  "id": "qwen3-coder-next",
+  "name": "Qwen3-Coder-Next-80B-A3B",
+  "provider": {
+    "name": "Alibaba (Qwen)",
+    "url": "https://qwen.ai",
+    "country": "CN"
+  },
+  "release_date": "2026-02-03",
+  "status": "ga",
+  "description": "Open-source hybrid mixture-of-experts coding model with 80B total parameters and 3B active, trained on 800K verifiable coding tasks via agentic pipeline.",
+
+  "sources": {
+    "huggingface": "https://huggingface.co/Qwen/Qwen3-Coder-Next",
+    "blog_post": "https://qwen.ai/blog?id=qwen3-coder-next",
+    "github": "https://github.com/QwenLM/Qwen3-Coder"
+  },
+
+  "license": {
+    "spdx_id": "Apache-2.0",
+    "commercial_use": true,
+    "open_weights": true
+  },
+
+  "architecture": {
+    "type": "hybrid-moe",
+    "family": "Transformer",
+    "total_params": "80B",
+    "active_params": "3B",
+    "layers": 48,
+    "hidden_dim": 2048,
+    "context_length": 262144,
+    "moe": {
+      "total_experts": 512,
+      "active_experts": 10,
+      "shared_experts": 1
+    },
+    "modalities": {
+      "input": ["text", "code"],
+      "output": ["text", "code"]
+    }
+  },
+
+  "training": {
+    "data_composition": {
+      "code": 100
+    },
+    "data_sources": ["synthetic verifiable tasks"],
+    "methodology": ["SFT", "agentic pipeline"]
+  },
+
+  "inference": {
+    "frameworks": ["vLLM", "SGLang", "Transformers"]
+  },
+
+  "benchmarks": [
+    {
+      "name": "SWE-bench Verified",
+      "category": "coding",
+      "score": 70.6,
+      "score_unit": "percent"
+    },
+    {
+      "name": "SWE-bench Multilingual",
+      "category": "multilingual",
+      "score": 62.8,
+      "score_unit": "percent"
+    },
+    {
+      "name": "SWE-bench Pro",
+      "category": "coding",
+      "score": 44.3,
+      "score_unit": "percent"
+    },
+    {
+      "name": "Terminal-Bench 2.0",
+      "category": "agent",
+      "score": 36.2,
+      "score_unit": "percent"
+    },
+    {
+      "name": "SecCodeBench",
+      "category": "coding",
+      "score": 61.2,
+      "score_unit": "percent"
+    }
+  ],
+
+  "capabilities": {
+    "tool_calling": true,
+    "function_calling": true,
+    "code_execution": true,
+    "programming_languages": 370
+  },
+
+  "intended_use": {
+    "primary_uses": ["code_generation", "agentic_coding", "software_engineering"],
+    "out_of_scope": []
+  },
+
+  "meta": {
+    "created_at": "2026-02-07T12:00:00Z",
+    "updated_at": "2026-02-07T12:00:00Z",
+    "created_by": "research-agent"
+  }
+}

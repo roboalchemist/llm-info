@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.0.0",
+  "id": "gemini-2-5-pro",
+  "name": "Gemini 2.5 Pro",
+  "provider": {
+    "name": "Google DeepMind",
+    "url": "https://deepmind.google",
+    "country": "US"
+  },
+  "release_date": "2025-03-01",
+  "status": "ga",
+  "description": "Multimodal reasoning model with improved thinking capabilities and code understanding.",
+
+  "sources": {
+    "blog_post": "https://blog.google/technology/google-deepmind/gemini-model-thinking-updates-march-2025/"
+  },
+
+  "license": {
+    "name": "Proprietary",
+    "commercial_use": true,
+    "open_weights": false
+  },
+
+  "architecture": {
+    "type": "dense",
+    "family": "Transformer",
+    "modalities": {
+      "input": ["text", "image", "video", "audio", "code"],
+      "output": ["text", "code"]
+    }
+  },
+
+  "benchmarks": [
+    {
+      "name": "SWE-bench Verified",
+      "category": "coding",
+      "score": 63.8,
+      "score_unit": "percent",
+      "source_url": "https://blog.google/technology/google-deepmind/gemini-model-thinking-updates-march-2025/"
+    }
+  ],
+
+  "capabilities": {
+    "tool_calling": true,
+    "function_calling": true,
+    "thinking_modes": ["thinking", "standard"]
+  },
+
+  "intended_use": {
+    "primary_uses": ["conversational", "code_generation", "reasoning"],
+    "out_of_scope": []
+  },
+
+  "meta": {
+    "created_at": "2026-02-07T12:00:00Z",
+    "updated_at": "2026-02-07T12:00:00Z",
+    "created_by": "research-agent"
+  }
+}
