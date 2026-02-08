@@ -1,6 +1,8 @@
 # llm-info
 
-Structured JSON registry of AI model cards and benchmarks for tracking and comparing frontier and open-weight language models.
+Historical registry of AI model cards and benchmark scores, designed for plotting capability trends over time — how fast the frontier moves, how quickly open models catch up, and where the gaps are.
+
+![SWE-bench Verified: Open vs Closed Frontier Over Time](assets/swe-bench-open-vs-closed.png)
 
 ## What's in here
 
