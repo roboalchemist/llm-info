@@ -1,0 +1,96 @@
+{
+  "schema_version": "1.0.0",
+  "id": "step3",
+  "name": "Step3",
+  "provider": {
+    "name": "StepFun",
+    "url": "https://www.stepfun.com",
+    "country": "CN"
+  },
+  "release_date": "2025-07-31",
+  "status": "ga",
+  "description": "321B MoE multimodal model with 38B active parameters. Features Multi-Matrix Factorization Attention (MFA) and Attention-FFN Disaggregation (AFD) for cost-efficient inference.",
+
+  "sources": {
+    "huggingface": "https://huggingface.co/stepfun-ai/step3",
+    "blog_post": "https://stepfun.ai/research/en/step3"
+  },
+
+  "license": {
+    "spdx_id": "Apache-2.0",
+    "commercial_use": true,
+    "open_weights": true
+  },
+
+  "architecture": {
+    "type": "moe",
+    "family": "Transformer",
+    "total_params": "321B",
+    "active_params": "38B",
+    "layers": 61,
+    "hidden_dim": 7168,
+    "context_length": 131072,
+    "moe": {
+      "total_experts": 48,
+      "active_experts": 8
+    },
+    "modalities": {
+      "input": ["text", "code", "image"],
+      "output": ["text", "code"]
+    }
+  },
+
+  "training": {
+    "tokens": "20T"
+  },
+
+  "benchmarks": [
+    {
+      "name": "LiveCodeBench",
+      "category": "coding",
+      "score": 67.1,
+      "score_unit": "percent",
+      "source_url": "https://stepfun.ai/research/en/step3"
+    },
+    {
+      "name": "AIME 2025",
+      "category": "reasoning",
+      "score": 82.9,
+      "score_unit": "percent",
+      "source_url": "https://stepfun.ai/research/en/step3"
+    },
+    {
+      "name": "GPQA Diamond",
+      "category": "reasoning",
+      "score": 73.0,
+      "score_unit": "percent",
+      "source_url": "https://stepfun.ai/research/en/step3"
+    },
+    {
+      "name": "MMMU",
+      "category": "multimodal",
+      "score": 74.2,
+      "score_unit": "percent",
+      "source_url": "https://stepfun.ai/research/en/step3"
+    }
+  ],
+
+  "capabilities": {
+    "tool_calling": true,
+    "thinking_modes": ["standard", "thinking"]
+  },
+
+  "intended_use": {
+    "primary_uses": ["reasoning", "code_generation", "multimodal"]
+  },
+
+  "related_models": [
+    { "id": "step-3-5-flash", "relationship": "successor" }
+  ],
+
+  "meta": {
+    "created_at": "2026-02-08T12:00:00Z",
+    "updated_at": "2026-02-08T12:00:00Z",
+    "created_by": "research-agent"
+  }
+}

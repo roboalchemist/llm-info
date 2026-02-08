@@ -1,0 +1,101 @@
+{
+  "schema_version": "1.0.0",
+  "id": "mimo-v2-flash",
+  "name": "MiMo-V2-Flash",
+  "provider": {
+    "name": "Xiaomi",
+    "url": "https://mimo.xiaomi.com",
+    "country": "CN"
+  },
+  "release_date": "2025-12-16",
+  "status": "ga",
+  "description": "309B MoE model with 15B active parameters. Hybrid sliding-window/full attention (5:1 ratio) and Multi-Token Prediction for 150 tok/s throughput. Trained on 27T tokens with FP8 mixed precision.",
+
+  "sources": {
+    "huggingface": "https://huggingface.co/XiaomiMiMo/MiMo-V2-Flash",
+    "github": "https://github.com/XiaomiMiMo/MiMo-V2-Flash",
+    "blog_post": "https://mimo.xiaomi.com/blog/mimo-v2-flash"
+  },
+
+  "license": {
+    "spdx_id": "MIT",
+    "commercial_use": true,
+    "open_weights": true
+  },
+
+  "architecture": {
+    "type": "moe",
+    "family": "Transformer",
+    "total_params": "309B",
+    "active_params": "15B",
+    "context_length": 262144,
+    "modalities": {
+      "input": ["text", "code"],
+      "output": ["text", "code"]
+    }
+  },
+
+  "training": {
+    "tokens": "27T"
+  },
+
+  "pricing": {
+    "input_per_mtok": 0.10,
+    "output_per_mtok": 0.30,
+    "as_of": "2025-12-16"
+  },
+
+  "benchmarks": [
+    {
+      "name": "SWE-bench Verified",
+      "category": "coding",
+      "score": 73.4,
+      "score_unit": "percent",
+      "source_url": "https://github.com/stepfun-ai/Step-3.5-Flash"
+    },
+    {
+      "name": "LiveCodeBench",
+      "category": "coding",
+      "score": 80.6,
+      "score_unit": "percent",
+      "methodology": {
+        "notes": "v6"
+      },
+      "source_url": "https://github.com/stepfun-ai/Step-3.5-Flash"
+    },
+    {
+      "name": "AIME 2025",
+      "category": "reasoning",
+      "score": 94.1,
+      "score_unit": "percent",
+      "source_url": "https://github.com/stepfun-ai/Step-3.5-Flash"
+    },
+    {
+      "name": "Terminal-Bench 2.0",
+      "category": "agent",
+      "score": 38.5,
+      "score_unit": "percent",
+      "source_url": "https://github.com/stepfun-ai/Step-3.5-Flash"
+    }
+  ],
+
+  "capabilities": {
+    "tool_calling": true,
+    "code_execution": true,
+    "thinking_modes": ["standard", "thinking"]
+  },
+
+  "intended_use": {
+    "primary_uses": ["reasoning", "agentic_coding", "code_generation"]
+  },
+
+  "related_models": [
+    { "id": "mimo-7b-rl", "relationship": "predecessor" }
+  ],
+
+  "meta": {
+    "created_at": "2026-02-08T12:00:00Z",
+    "updated_at": "2026-02-08T12:00:00Z",
+    "created_by": "research-agent"
+  }
+}

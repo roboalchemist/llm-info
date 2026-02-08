@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "id": "longcat-flash-thinking-2601",
+  "name": "LongCat-Flash-Thinking-2601",
+  "provider": {
+    "name": "Meituan",
+    "url": "https://www.longcatai.org",
+    "country": "CN"
+  },
+  "release_date": "2026-01-23",
+  "status": "ga",
+  "description": "560B MoE reasoning model with Heavy Thinking Mode (8 parallel reasoning paths). First open-source model with re-thinking mode. SOTA agentic capabilities among open models.",
+
+  "sources": {
+    "huggingface": "https://huggingface.co/meituan-longcat/LongCat-Flash-Thinking-2601",
+    "technical_report": "https://arxiv.org/abs/2601.16725",
+    "blog_post": "https://www.longcatai.org"
+  },
+
+  "license": {
+    "spdx_id": "MIT",
+    "commercial_use": true,
+    "open_weights": true
+  },
+
+  "architecture": {
+    "type": "moe",
+    "family": "Transformer",
+    "total_params": "560B",
+    "active_params": "27B",
+    "context_length": 131072,
+    "modalities": {
+      "input": ["text", "code"],
+      "output": ["text", "code"]
+    }
+  },
+
+  "benchmarks": [
+    {
+      "name": "GPQA Diamond",
+      "category": "reasoning",
+      "score": 85.2,
+      "score_unit": "percent",
+      "methodology": {
+        "notes": "Heavy Thinking Mode"
+      },
+      "source_url": "https://arxiv.org/abs/2601.16725"
+    }
+  ],
+
+  "capabilities": {
+    "tool_calling": true,
+    "code_execution": true,
+    "thinking_modes": ["standard", "thinking", "heavy"]
+  },
+
+  "intended_use": {
+    "primary_uses": ["reasoning", "agentic_coding", "code_generation"]
+  },
+
+  "related_models": [
+    { "id": "longcat-flash-chat", "relationship": "predecessor" }
+  ],
+
+  "meta": {
+    "created_at": "2026-02-08T12:00:00Z",
+    "updated_at": "2026-02-08T12:00:00Z",
+    "created_by": "research-agent"
+  }
+}

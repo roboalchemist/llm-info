@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.0.0",
+  "id": "longcat-flash-lite",
+  "name": "LongCat-Flash-Lite",
+  "provider": {
+    "name": "Meituan",
+    "url": "https://www.longcatai.org",
+    "country": "CN"
+  },
+  "release_date": "2026-01-15",
+  "status": "ga",
+  "description": "68.5B lightweight MoE model with 2.9-4.5B active parameters (avg ~3B). Uses novel N-gram embedding expansion approach. 256K context via YaRN.",
+
+  "sources": {
+    "huggingface": "https://huggingface.co/meituan-longcat/LongCat-Flash-Lite",
+    "blog_post": "https://www.longcatai.org"
+  },
+
+  "license": {
+    "spdx_id": "MIT",
+    "commercial_use": true,
+    "open_weights": true
+  },
+
+  "architecture": {
+    "type": "moe",
+    "family": "Transformer",
+    "total_params": "68.5B",
+    "active_params": "3B",
+    "context_length": 262144,
+    "modalities": {
+      "input": ["text", "code"],
+      "output": ["text", "code"]
+    }
+  },
+
+  "benchmarks": [],
+
+  "capabilities": {
+    "tool_calling": true,
+    "code_execution": true
+  },
+
+  "intended_use": {
+    "primary_uses": ["conversational", "agentic_coding"]
+  },
+
+  "related_models": [
+    { "id": "longcat-flash-chat", "relationship": "variant" }
+  ],
+
+  "meta": {
+    "created_at": "2026-02-08T12:00:00Z",
+    "updated_at": "2026-02-08T12:00:00Z",
+    "created_by": "research-agent"
+  }
+}
