@@ -22,6 +22,8 @@
   "architecture": {
     "type": "moe",
     "family": "Transformer",
+    "total_params": "671B",
+    "active_params": "37B",
     "modalities": {
       "input": ["text", "code"],
       "output": ["text", "code"]

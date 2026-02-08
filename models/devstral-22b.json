@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.0.0",
+  "id": "devstral-22b",
+  "name": "Devstral (22B)",
+  "provider": {
+    "name": "Mistral AI",
+    "url": "https://mistral.ai",
+    "country": "FR"
+  },
+  "release_date": "2025-05-01",
+  "status": "ga",
+  "description": "22B dense coding model built in collaboration with All Hands AI, specifically trained for code agent workflows on OpenHands/SWE-Agent scaffolds.",
+
+  "sources": {
+    "blog_post": "https://mistral.ai/news/devstral"
+  },
+
+  "license": {
+    "spdx_id": "Apache-2.0",
+    "commercial_use": true,
+    "open_weights": true
+  },
+
+  "architecture": {
+    "type": "dense",
+    "family": "Transformer",
+    "total_params": "22B",
+    "context_length": 131072,
+    "modalities": {
+      "input": ["text", "code"],
+      "output": ["text", "code"]
+    }
+  },
+
+  "benchmarks": [
+    {
+      "name": "SWE-bench Verified",
+      "category": "coding",
+      "score": 46.8,
+      "score_unit": "percent",
+      "source_url": "https://mistral.ai/news/devstral"
+    }
+  ],
+
+  "capabilities": {
+    "tool_calling": true,
+    "code_execution": true
+  },
+
+  "intended_use": {
+    "primary_uses": ["code_generation", "agentic_coding"]
+  },
+
+  "meta": {
+    "created_at": "2026-02-07T20:00:00Z",
+    "updated_at": "2026-02-07T20:00:00Z",
+    "created_by": "research-agent"
+  }
+}

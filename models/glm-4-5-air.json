@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.0.0",
+  "id": "glm-4-5-air",
+  "name": "GLM-4.5-Air",
+  "provider": {
+    "name": "Zhipu AI",
+    "url": "https://z.ai",
+    "country": "CN"
+  },
+  "release_date": "2025-07-28",
+  "status": "ga",
+  "description": "Lightweight MoE model with 106B total parameters and 12B active, using 46 transformer layers (1 dense + 45 MoE). Strong tool calling and agentic capabilities.",
+
+  "sources": {
+    "blog_post": "https://z.ai/blog/glm-4.5",
+    "huggingface": "https://huggingface.co/zai-org/GLM-4.5-Air"
+  },
+
+  "license": {
+    "spdx_id": "MIT",
+    "commercial_use": true,
+    "open_weights": true
+  },
+
+  "architecture": {
+    "type": "moe",
+    "family": "GLM4_MoE",
+    "total_params": "106B",
+    "active_params": "12B",
+    "layers": 46,
+    "modalities": {
+      "input": ["text", "code"],
+      "output": ["text", "code"]
+    }
+  },
+
+  "benchmarks": [
+    {
+      "name": "SWE-bench Verified",
+      "category": "coding",
+      "score": 59.8,
+      "score_unit": "percent",
+      "source_url": "https://www.infoq.com/news/2025/08/glm-4-5/"
+    }
+  ],
+
+  "capabilities": {
+    "tool_calling": true,
+    "code_execution": true
+  },
+
+  "intended_use": {
+    "primary_uses": ["code_generation", "agentic_coding", "conversational"]
+  },
+
+  "related_models": [
+    { "id": "glm-4-7", "relationship": "predecessor" }
+  ],
+
+  "meta": {
+    "created_at": "2026-02-07T20:00:00Z",
+    "updated_at": "2026-02-07T20:00:00Z",
+    "created_by": "research-agent"
+  }
+}

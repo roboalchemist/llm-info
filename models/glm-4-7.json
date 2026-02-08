@@ -27,7 +27,8 @@
   "architecture": {
     "type": "moe",
     "family": "GLM4_MoE",
-    "total_params": "400B",
+    "total_params": "355B",
+    "active_params": "32B",
     "context_length": 200000,
     "modalities": {
       "input": ["text", "code"],

@@ -27,6 +27,7 @@
     "type": "moe",
     "family": "Transformer",
     "total_params": "1T",
+    "active_params": "32B",
     "modalities": {
       "input": ["text", "code"],
       "output": ["text", "code"]

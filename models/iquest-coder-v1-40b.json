@@ -1,0 +1,95 @@
+{
+  "schema_version": "1.0.0",
+  "id": "iquest-coder-v1-40b",
+  "name": "IQuest-Coder-V1-40B",
+  "provider": {
+    "name": "IQuestLab (Ubiquant)",
+    "url": "https://iquestlab.github.io/",
+    "country": "CN"
+  },
+  "release_date": "2026-01-01",
+  "status": "ga",
+  "description": "Open-source 40B dense coding model using LoopCoder architecture (input passes through 80 transformer layers twice) and Code-Flow training on git evolution data. From Ubiquant's AI research division.",
+
+  "sources": {
+    "huggingface": "https://huggingface.co/IQuestLab/IQuest-Coder-V1-40B-Instruct",
+    "github": "https://github.com/IQuestLab/IQuest-Coder-V1"
+  },
+
+  "license": {
+    "name": "Modified MIT (with attribution requirement)",
+    "commercial_use": true,
+    "open_weights": true
+  },
+
+  "architecture": {
+    "type": "dense",
+    "family": "Transformer (LoopCoder)",
+    "total_params": "40B",
+    "layers": 80,
+    "hidden_dim": 5120,
+    "attention_heads": 40,
+    "kv_heads": 8,
+    "vocab_size": 76800,
+    "context_length": 131072,
+    "attention_mechanism": "GQA",
+    "modalities": {
+      "input": ["text", "code"],
+      "output": ["text", "code"]
+    }
+  },
+
+  "benchmarks": [
+    {
+      "name": "SWE-bench Verified",
+      "category": "coding",
+      "score": 76.2,
+      "score_unit": "percent",
+      "methodology": {
+        "notes": "Corrected score after fixing git history access issue; initial claim was 81.4%"
+      },
+      "source_url": "https://github.com/IQuestLab/IQuest-Coder-V1/issues/14"
+    },
+    {
+      "name": "LiveCodeBench",
+      "category": "coding",
+      "score": 81.1,
+      "score_unit": "percent",
+      "methodology": {
+        "notes": "v6"
+      },
+      "source_url": "https://aicybr.com/blog/iquest-coder-v1"
+    },
+    {
+      "name": "BigCodeBench",
+      "category": "coding",
+      "score": 49.9,
+      "score_unit": "percent",
+      "source_url": "https://aicybr.com/blog/iquest-coder-v1"
+    },
+    {
+      "name": "HumanEval",
+      "category": "coding",
+      "score": 91.5,
+      "score_unit": "percent",
+      "methodology": {
+        "notes": "pass@1, community-tested"
+      }
+    }
+  ],
+
+  "capabilities": {
+    "tool_calling": true,
+    "code_execution": true
+  },
+
+  "intended_use": {
+    "primary_uses": ["code_generation", "agentic_coding", "software_engineering"]
+  },
+
+  "meta": {
+    "created_at": "2026-02-07T20:00:00Z",
+    "updated_at": "2026-02-07T20:00:00Z",
+    "created_by": "research-agent"
+  }
+}
