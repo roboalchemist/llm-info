@@ -1,0 +1,122 @@
+{
+  "schema_version": "1.0.0",
+  "id": "step-3-5-flash",
+  "name": "Step 3.5 Flash",
+  "provider": {
+    "name": "StepFun",
+    "url": "https://www.stepfun.com",
+    "country": "CN"
+  },
+  "release_date": "2026-02-06",
+  "status": "ga",
+  "description": "196B MoE model with 11B active parameters per token, using 3-way Multi-Token Prediction for 100-300 tok/s throughput. Optimized for reasoning and agentic coding tasks.",
+
+  "sources": {
+    "github": "https://github.com/stepfun-ai/Step-3.5-Flash",
+    "huggingface": "https://huggingface.co/stepfun-ai/Step-3.5-Flash",
+    "technical_report": "https://github.com/stepfun-ai/Step-3.5-Flash/blob/main/step_3p5_flash_tech_report.pdf",
+    "blog_post": "https://static.stepfun.com/blog/step-3.5-flash/"
+  },
+
+  "license": {
+    "spdx_id": "Apache-2.0",
+    "commercial_use": true,
+    "open_weights": true
+  },
+
+  "architecture": {
+    "type": "moe",
+    "family": "Transformer",
+    "total_params": "196B",
+    "active_params": "11B",
+    "layers": 45,
+    "hidden_dim": 4096,
+    "vocab_size": 128896,
+    "context_length": 262144,
+    "attention_mechanism": "GQA",
+    "activation_function": "SwiGLU",
+    "moe": {
+      "total_experts": 288,
+      "active_experts": 8,
+      "shared_experts": 1
+    },
+    "modalities": {
+      "input": ["text", "code"],
+      "output": ["text", "code"]
+    }
+  },
+
+  "inference": {
+    "frameworks": ["vLLM", "SGLang", "Transformers", "llama.cpp"],
+    "quantizations": ["BF16", "FP8"],
+    "api_compatible": ["openai"]
+  },
+
+  "benchmarks": [
+    {
+      "name": "SWE-bench Verified",
+      "category": "coding",
+      "score": 74.4,
+      "score_unit": "percent",
+      "source_url": "https://github.com/stepfun-ai/Step-3.5-Flash"
+    },
+    {
+      "name": "LiveCodeBench",
+      "category": "coding",
+      "score": 86.4,
+      "score_unit": "percent",
+      "methodology": {
+        "notes": "v6"
+      },
+      "source_url": "https://github.com/stepfun-ai/Step-3.5-Flash"
+    },
+    {
+      "name": "Terminal-Bench 2.0",
+      "category": "agent",
+      "score": 51.0,
+      "score_unit": "percent",
+      "source_url": "https://github.com/stepfun-ai/Step-3.5-Flash"
+    },
+    {
+      "name": "AIME 2025",
+      "category": "reasoning",
+      "score": 97.3,
+      "score_unit": "percent",
+      "source_url": "https://github.com/stepfun-ai/Step-3.5-Flash"
+    },
+    {
+      "name": "BrowseComp",
+      "category": "agent",
+      "score": 51.6,
+      "score_unit": "percent",
+      "source_url": "https://github.com/stepfun-ai/Step-3.5-Flash"
+    },
+    {
+      "name": "GAIA",
+      "category": "agent",
+      "score": 84.5,
+      "score_unit": "percent",
+      "methodology": {
+        "notes": "no file"
+      },
+      "source_url": "https://github.com/stepfun-ai/Step-3.5-Flash"
+    }
+  ],
+
+  "capabilities": {
+    "tool_calling": true,
+    "function_calling": true,
+    "code_execution": true,
+    "thinking_modes": ["standard", "thinking"]
+  },
+
+  "intended_use": {
+    "primary_uses": ["code_generation", "agentic_coding", "reasoning", "conversational"]
+  },
+
+  "meta": {
+    "created_at": "2026-02-08T12:00:00Z",
+    "updated_at": "2026-02-08T12:00:00Z",
+    "created_by": "research-agent"
+  }
+}
